@@ -1,9 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 const Contact = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -13,24 +12,6 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -93,7 +74,6 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      ref={sectionRef}
       className="relative py-24 lg:py-32 bg-white overflow-hidden"
     >
       {/* Background */}
@@ -102,7 +82,7 @@ const Contact = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
             Get in Touch
           </span>
@@ -117,7 +97,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Contact info */}
-          <div className={`lg:col-span-2 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+          <div className="lg:col-span-2">
             <div className="bg-gradient-to-br from-neutral-900 to-green-950 rounded-3xl p-8 lg:p-10">
               <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
 
@@ -186,7 +166,7 @@ const Contact = () => {
           </div>
 
           {/* Contact form */}
-          <div className={`lg:col-span-3 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+          <div className="lg:col-span-3">
             <div className="bg-neutral-50 rounded-3xl p-8 lg:p-10">
               {isSubmitted ? (
                 <div className="text-center py-12">

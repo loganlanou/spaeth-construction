@@ -1,28 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   const values = [
     {
       icon: (
@@ -72,7 +50,6 @@ const About = () => {
   return (
     <section
       id="about"
-      ref={sectionRef}
       className="relative py-24 lg:py-32 bg-white overflow-hidden"
     >
       {/* Background elements */}
@@ -82,7 +59,7 @@ const About = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+          <div>
             <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
               About Us
             </span>
@@ -117,7 +94,7 @@ const About = () => {
           </div>
 
           {/* Right content - Timeline */}
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+          <div>
             <div className="relative">
               {/* Decorative background */}
               <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl transform rotate-1"></div>

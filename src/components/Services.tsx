@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-
 const services = [
   {
     icon: (
@@ -66,30 +64,9 @@ const services = [
 ];
 
 const Services = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="services"
-      ref={sectionRef}
       className="relative py-24 lg:py-32 bg-neutral-50 overflow-hidden"
     >
       {/* Background decoration */}
@@ -98,7 +75,7 @@ const Services = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
             Our Services
           </span>
@@ -117,10 +94,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative bg-white rounded-2xl p-8 shadow-lg shadow-neutral-200/50 hover:shadow-xl hover:shadow-green-100/50 transition-all duration-500 hover:-translate-y-2 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className="group relative bg-white rounded-2xl p-8 shadow-lg shadow-neutral-200/50 hover:shadow-xl hover:shadow-green-100/50 transition-all duration-500 hover:-translate-y-2"
             >
               {/* Icon */}
               <div className="w-16 h-16 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-green-500 group-hover:to-green-600 group-hover:text-white transition-all duration-300">
@@ -154,7 +128,7 @@ const Services = () => {
         </div>
 
         {/* CTA */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="text-center mt-16">
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-neutral-900 text-white font-semibold rounded-xl hover:bg-neutral-800 transform hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-neutral-900/20"

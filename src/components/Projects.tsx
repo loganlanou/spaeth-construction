@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 const projects = [
   {
@@ -42,9 +42,7 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('All');
-  const sectionRef = useRef<HTMLElement>(null);
 
   const categories = ['All', 'Commercial', 'Agricultural', 'Residential', 'Concrete', 'Excavation'];
 
@@ -52,27 +50,9 @@ const Projects = () => {
     ? projects
     : projects.filter(p => p.category === activeCategory);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="projects"
-      ref={sectionRef}
       className="relative py-24 lg:py-32 bg-gradient-to-b from-neutral-900 to-neutral-950 overflow-hidden"
     >
       {/* Background elements */}
@@ -83,7 +63,7 @@ const Projects = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-green-500/10 text-green-400 text-sm font-semibold rounded-full mb-4 border border-green-500/20">
             Our Portfolio
           </span>
@@ -97,7 +77,7 @@ const Projects = () => {
         </div>
 
         {/* Category filter */}
-        <div className={`flex flex-wrap justify-center gap-2 mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
             <button
               key={category}
@@ -118,10 +98,7 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br from-white/5 to-white/[0.02] rounded-2xl overflow-hidden border border-white/10 hover:border-green-500/50 transition-all duration-500 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${(index + 3) * 100}ms` }}
+              className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] rounded-2xl overflow-hidden border border-white/10 hover:border-green-500/50 transition-all duration-500"
             >
               {/* Project image placeholder with gradient */}
               <div className="relative h-48 bg-gradient-to-br from-neutral-800 to-neutral-900 overflow-hidden">
@@ -170,7 +147,7 @@ const Projects = () => {
         </div>
 
         {/* CTA */}
-        <div className={`text-center mt-12 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="text-center mt-12">
           <p className="text-neutral-500 mb-4">Want to see your project featured here?</p>
           <a
             href="#contact"

@@ -1,15 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const stats = [
     { value: '20+', label: 'Years Experience' },
     { value: '500+', label: 'Projects Completed' },
@@ -44,22 +37,13 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="text-center">
           {/* Badge */}
-          <div
-            className={`inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full mb-8 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full mb-8">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
             <span className="text-green-300 text-sm font-medium">Licensed, Bonded & Insured Since 2001</span>
           </div>
 
           {/* Main heading */}
-          <h1
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '200ms' }}
-          >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Building Wisconsin&apos;s
             <br />
             <span className="relative">
@@ -80,23 +64,13 @@ const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <p
-            className={`text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '400ms' }}
-          >
+          <p className="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto mb-10">
             Premier residential, commercial, and agricultural construction services in Cadott and surrounding areas.
             Expert concrete work, excavation, and custom building solutions.
           </p>
 
           {/* CTA Buttons */}
-          <div
-            className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '500ms' }}
-          >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Link
               href="#contact"
               className="group relative px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-2xl shadow-green-500/30 hover:shadow-green-500/50 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden"
@@ -135,12 +109,7 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div
-            className={`grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '700ms' }}
-          >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="group">
                 <div className="text-3xl sm:text-4xl font-bold text-white mb-1 group-hover:text-green-400 transition-colors duration-300">
