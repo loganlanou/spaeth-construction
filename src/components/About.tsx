@@ -77,18 +77,18 @@ const About = () => {
     >
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent"></div>
-      <div className="absolute -right-64 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-clover-50 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute -right-64 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-green-50 rounded-full blur-3xl opacity-50"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <span className="inline-block px-4 py-1.5 bg-clover-100 text-clover-700 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
               About Us
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
               Building Trust Since
-              <span className="block text-clover-600">2001</span>
+              <span className="block text-green-600">2001</span>
             </h2>
             <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
               Cloverbelt Construction LLC is a licensed, bonded, and insured construction company proudly serving Cadott, Wisconsin and the surrounding communities. Founded by Josh R. Spaeth, we&apos;ve built our reputation on quality craftsmanship, honest communication, and customer satisfaction.
@@ -102,9 +102,9 @@ const About = () => {
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-3 p-4 bg-neutral-50 rounded-xl hover:bg-clover-50 transition-colors duration-300"
+                  className="flex items-start gap-3 p-4 bg-neutral-50 rounded-xl hover:bg-green-50 transition-colors duration-300"
                 >
-                  <div className="w-10 h-10 bg-clover-100 rounded-lg flex items-center justify-center text-clover-600 flex-shrink-0">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 flex-shrink-0">
                     {value.icon}
                   </div>
                   <div>
@@ -121,9 +121,9 @@ const About = () => {
             <div className="relative">
               {/* Decorative background */}
               <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl transform rotate-1"></div>
-              <div className="relative bg-gradient-to-br from-neutral-900 to-clover-950 rounded-3xl p-8 lg:p-10">
+              <div className="relative bg-gradient-to-br from-neutral-900 to-green-950 rounded-3xl p-8 lg:p-10">
                 <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <span className="w-10 h-10 bg-clover-500 rounded-lg flex items-center justify-center">
+                  <span className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -136,15 +136,15 @@ const About = () => {
                     <div key={index} className="flex gap-4 group">
                       {/* Year bubble */}
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-clover-500/10 border border-clover-500/30 rounded-xl flex items-center justify-center group-hover:bg-clover-500 group-hover:border-clover-500 transition-all duration-300">
-                          <span className="text-sm font-bold text-clover-400 group-hover:text-white transition-colors duration-300">
+                        <div className="w-16 h-16 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center group-hover:bg-green-500 group-hover:border-green-500 transition-all duration-300">
+                          <span className="text-sm font-bold text-green-400 group-hover:text-white transition-colors duration-300">
                             {milestone.year}
                           </span>
                         </div>
                       </div>
                       {/* Content */}
                       <div className="flex-1 pt-1">
-                        <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-clover-300 transition-colors duration-300">
+                        <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-green-300 transition-colors duration-300">
                           {milestone.event}
                         </h4>
                         <p className="text-neutral-400 text-sm">{milestone.description}</p>

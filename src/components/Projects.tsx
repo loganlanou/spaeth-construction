@@ -77,19 +77,19 @@ const Projects = () => {
     >
       {/* Background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-0 w-72 h-72 bg-clover-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-clover-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-0 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-green-600/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="inline-block px-4 py-1.5 bg-clover-500/10 text-clover-400 text-sm font-semibold rounded-full mb-4 border border-clover-500/20">
+          <span className="inline-block px-4 py-1.5 bg-green-500/10 text-green-400 text-sm font-semibold rounded-full mb-4 border border-green-500/20">
             Our Portfolio
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Featured
-            <span className="text-clover-400"> Projects</span>
+            <span className="text-green-400"> Projects</span>
           </h2>
           <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             A showcase of our craftsmanship across residential, commercial, and agricultural construction.
@@ -104,7 +104,7 @@ const Projects = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-clover-500 text-white shadow-lg shadow-clover-500/30'
+                  ? 'bg-green-500 text-white shadow-lg shadow-green-500/30'
                   : 'bg-white/5 text-neutral-400 hover:bg-white/10 hover:text-white border border-white/10'
               }`}
             >
@@ -118,24 +118,24 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br from-white/5 to-white/[0.02] rounded-2xl overflow-hidden border border-white/10 hover:border-clover-500/50 transition-all duration-500 ${
+              className={`group relative bg-gradient-to-br from-white/5 to-white/[0.02] rounded-2xl overflow-hidden border border-white/10 hover:border-green-500/50 transition-all duration-500 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${(index + 3) * 100}ms` }}
             >
               {/* Project image placeholder with gradient */}
               <div className="relative h-48 bg-gradient-to-br from-neutral-800 to-neutral-900 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-clover-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 {/* Category badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-black/50 backdrop-blur-sm text-clover-400 text-xs font-semibold rounded-full border border-clover-500/30">
+                  <span className="px-3 py-1 bg-black/50 backdrop-blur-sm text-green-400 text-xs font-semibold rounded-full border border-green-500/30">
                     {project.category}
                   </span>
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-neutral-900 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="w-16 h-16 text-neutral-700 group-hover:text-clover-500/30 transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <svg className="w-16 h-16 text-neutral-700 group-hover:text-green-500/30 transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                   </svg>
                 </div>
@@ -143,7 +143,7 @@ const Projects = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-clover-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
                   {project.title}
                 </h3>
                 <p className="text-neutral-400 text-sm mb-4 leading-relaxed">
@@ -164,7 +164,7 @@ const Projects = () => {
               </div>
 
               {/* Hover line */}
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-clover-400 to-clover-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-green-400 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </div>
           ))}
         </div>
@@ -174,7 +174,7 @@ const Projects = () => {
           <p className="text-neutral-500 mb-4">Want to see your project featured here?</p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-clover-400 font-semibold hover:text-clover-300 transition-colors duration-300 group"
+            className="inline-flex items-center gap-2 text-green-400 font-semibold hover:text-green-300 transition-colors duration-300 group"
           >
             Start Your Project
             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -93,19 +93,19 @@ const Services = () => {
       className="relative py-24 lg:py-32 bg-neutral-50 overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-clover-50/50 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-clover-100/50 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green-50/50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-100/50 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="inline-block px-4 py-1.5 bg-clover-100 text-clover-700 text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
             Our Services
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
             Comprehensive Construction
             <br />
-            <span className="text-clover-600">Solutions</span>
+            <span className="text-green-600">Solutions</span>
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             From concept to completion, we deliver excellence across residential, commercial, and agricultural projects throughout Wisconsin.
@@ -117,18 +117,18 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative bg-white rounded-2xl p-8 shadow-lg shadow-neutral-200/50 hover:shadow-xl hover:shadow-clover-100/50 transition-all duration-500 hover:-translate-y-2 ${
+              className={`group relative bg-white rounded-2xl p-8 shadow-lg shadow-neutral-200/50 hover:shadow-xl hover:shadow-green-100/50 transition-all duration-500 hover:-translate-y-2 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-clover-50 to-clover-100 rounded-2xl flex items-center justify-center text-clover-600 mb-6 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-clover-500 group-hover:to-clover-600 group-hover:text-white transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-green-500 group-hover:to-green-600 group-hover:text-white transition-all duration-300">
                 {service.icon}
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-clover-700 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-green-700 transition-colors duration-300">
                 {service.title}
               </h3>
               <p className="text-neutral-600 mb-6 leading-relaxed">
@@ -139,7 +139,7 @@ const Services = () => {
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center gap-2 text-sm text-neutral-500">
-                    <svg className="w-4 h-4 text-clover-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     {feature}
@@ -148,7 +148,7 @@ const Services = () => {
               </ul>
 
               {/* Hover accent line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-clover-400 to-clover-600 rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-green-600 rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </div>
           ))}
         </div>

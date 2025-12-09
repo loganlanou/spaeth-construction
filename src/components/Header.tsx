@@ -36,7 +36,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-clover-500 to-clover-700 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-clover-500/30">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-green-500/30">
                 <svg
                   className="w-7 h-7 text-white"
                   fill="none"
@@ -51,13 +51,13 @@ const Header = () => {
                   />
                 </svg>
               </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-clover-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div className="flex flex-col">
               <span className={`font-bold text-xl tracking-tight transition-colors duration-300 ${isScrolled ? 'text-neutral-900' : 'text-white'}`}>
                 Cloverbelt
               </span>
-              <span className={`text-xs font-medium uppercase tracking-widest transition-colors duration-300 ${isScrolled ? 'text-clover-600' : 'text-clover-300'}`}>
+              <span className={`text-xs font-medium uppercase tracking-widest transition-colors duration-300 ${isScrolled ? 'text-green-600' : 'text-green-300'}`}>
                 Construction
               </span>
             </div>
@@ -69,9 +69,9 @@ const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:bg-clover-500/10 ${
+                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:bg-green-500/10 ${
                   isScrolled
-                    ? 'text-neutral-700 hover:text-clover-600'
+                    ? 'text-neutral-700 hover:text-green-600'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -80,7 +80,7 @@ const Header = () => {
             ))}
             <Link
               href="#contact"
-              className="ml-4 px-6 py-2.5 bg-gradient-to-r from-clover-500 to-clover-600 text-white font-semibold text-sm rounded-lg shadow-lg shadow-clover-500/30 hover:shadow-clover-500/50 hover:from-clover-600 hover:to-clover-700 transform hover:-translate-y-0.5 transition-all duration-300"
+              className="ml-4 px-6 py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold text-sm rounded-lg shadow-lg shadow-green-500/30 hover:shadow-green-500/50 hover:from-green-600 hover:to-green-700 transform hover:-translate-y-0.5 transition-all duration-300"
             >
               Get a Quote
             </Link>
@@ -131,7 +131,7 @@ const Header = () => {
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-3 text-neutral-700 font-medium rounded-lg hover:bg-clover-50 hover:text-clover-600 transition-colors duration-200"
+              className="block px-4 py-3 text-neutral-700 font-medium rounded-lg hover:bg-green-50 hover:text-green-600 transition-colors duration-200"
             >
               {link.label}
             </Link>
@@ -139,7 +139,7 @@ const Header = () => {
           <Link
             href="#contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block mt-4 px-4 py-3 bg-gradient-to-r from-clover-500 to-clover-600 text-white font-semibold text-center rounded-lg"
+            className="block mt-4 px-4 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold text-center rounded-lg"
           >
             Get a Quote
           </Link>

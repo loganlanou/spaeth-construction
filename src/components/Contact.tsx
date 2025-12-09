@@ -98,17 +98,17 @@ const Contact = () => {
     >
       {/* Background */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent"></div>
-      <div className="absolute -left-64 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-clover-50 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute -left-64 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-green-50 rounded-full blur-3xl opacity-50"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="inline-block px-4 py-1.5 bg-clover-100 text-clover-700 text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
             Get in Touch
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
             Let&apos;s Build
-            <span className="text-clover-600"> Together</span>
+            <span className="text-green-600"> Together</span>
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             Ready to start your project? Contact us for a free consultation and estimate.
@@ -118,7 +118,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Contact info */}
           <div className={`lg:col-span-2 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <div className="bg-gradient-to-br from-neutral-900 to-clover-950 rounded-3xl p-8 lg:p-10">
+            <div className="bg-gradient-to-br from-neutral-900 to-green-950 rounded-3xl p-8 lg:p-10">
               <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
 
               <div className="space-y-6 mb-10">
@@ -131,19 +131,19 @@ const Contact = () => {
                         rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="flex items-start gap-4 group"
                       >
-                        <div className="w-12 h-12 bg-clover-500/10 border border-clover-500/30 rounded-xl flex items-center justify-center text-clover-400 group-hover:bg-clover-500 group-hover:border-clover-500 group-hover:text-white transition-all duration-300 flex-shrink-0">
+                        <div className="w-12 h-12 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center text-green-400 group-hover:bg-green-500 group-hover:border-green-500 group-hover:text-white transition-all duration-300 flex-shrink-0">
                           {info.icon}
                         </div>
                         <div>
                           <p className="text-neutral-500 text-sm mb-1">{info.label}</p>
-                          <p className="text-white font-medium group-hover:text-clover-300 transition-colors duration-300">
+                          <p className="text-white font-medium group-hover:text-green-300 transition-colors duration-300">
                             {info.value}
                           </p>
                         </div>
                       </a>
                     ) : (
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-clover-500/10 border border-clover-500/30 rounded-xl flex items-center justify-center text-clover-400 flex-shrink-0">
+                        <div className="w-12 h-12 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center text-green-400 flex-shrink-0">
                           {info.icon}
                         </div>
                         <div>
@@ -164,7 +164,7 @@ const Contact = () => {
                     href="https://www.facebook.com/people/Cloverbelt-Construction/100063839118887/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-neutral-400 hover:bg-clover-500 hover:border-clover-500 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-neutral-400 hover:bg-green-500 hover:border-green-500 hover:text-white transition-all duration-300"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -174,7 +174,7 @@ const Contact = () => {
                     href="https://x.com/cloverbeltconsn"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-neutral-400 hover:bg-clover-500 hover:border-clover-500 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-neutral-400 hover:bg-green-500 hover:border-green-500 hover:text-white transition-all duration-300"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -190,8 +190,8 @@ const Contact = () => {
             <div className="bg-neutral-50 rounded-3xl p-8 lg:p-10">
               {isSubmitted ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-clover-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-8 h-8 text-clover-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -199,7 +199,7 @@ const Contact = () => {
                   <p className="text-neutral-600 mb-6">We&apos;ll get back to you within 24 hours.</p>
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    className="text-clover-600 font-medium hover:text-clover-700 transition-colors duration-300"
+                    className="text-green-600 font-medium hover:text-green-700 transition-colors duration-300"
                   >
                     Send another message
                   </button>
@@ -218,7 +218,7 @@ const Contact = () => {
                         required
                         value={formState.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-clover-500 focus:ring-2 focus:ring-clover-500/20 transition-all duration-300 outline-none"
+                        className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none"
                         placeholder="John Smith"
                       />
                     </div>
@@ -233,7 +233,7 @@ const Contact = () => {
                         required
                         value={formState.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-clover-500 focus:ring-2 focus:ring-clover-500/20 transition-all duration-300 outline-none"
+                        className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -250,7 +250,7 @@ const Contact = () => {
                         name="phone"
                         value={formState.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-clover-500 focus:ring-2 focus:ring-clover-500/20 transition-all duration-300 outline-none"
+                        className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none"
                         placeholder="(715) 555-0123"
                       />
                     </div>
@@ -264,7 +264,7 @@ const Contact = () => {
                         required
                         value={formState.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-clover-500 focus:ring-2 focus:ring-clover-500/20 transition-all duration-300 outline-none appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none appearance-none cursor-pointer"
                       >
                         <option value="">Select a service</option>
                         {services.map((service) => (
@@ -285,7 +285,7 @@ const Contact = () => {
                       rows={5}
                       value={formState.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-clover-500 focus:ring-2 focus:ring-clover-500/20 transition-all duration-300 outline-none resize-none"
+                      className="w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none resize-none"
                       placeholder="Tell us about your project, timeline, and any specific requirements..."
                     />
                   </div>
@@ -293,7 +293,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-clover-500 to-clover-600 text-white font-semibold rounded-xl shadow-lg shadow-clover-500/30 hover:shadow-clover-500/50 hover:from-clover-600 hover:to-clover-700 transform hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-lg shadow-green-500/30 hover:shadow-green-500/50 hover:from-green-600 hover:to-green-700 transform hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
