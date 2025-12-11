@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -79,12 +81,14 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#16a34a" />
+        <meta name="theme-color" content="#10b981" />
       </head>
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased bg-white text-neutral-900`}
+        className={`${inter.variable} ${outfit.variable} antialiased bg-slate-950 text-white`}
       >
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

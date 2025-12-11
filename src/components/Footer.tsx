@@ -7,16 +7,16 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { label: 'Commercial Construction', href: '#services' },
-      { label: 'Agricultural Buildings', href: '#services' },
-      { label: 'Residential Construction', href: '#services' },
-      { label: 'Concrete Work', href: '#services' },
-      { label: 'Excavation', href: '#services' },
+      { label: 'Commercial Construction', href: '/services' },
+      { label: 'Agricultural Buildings', href: '/services' },
+      { label: 'Residential Construction', href: '/services' },
+      { label: 'Concrete Work', href: '/services' },
+      { label: 'Excavation', href: '/services' },
     ],
     company: [
-      { label: 'About Us', href: '#about' },
-      { label: 'Our Projects', href: '#projects' },
-      { label: 'Contact', href: '#contact' },
+      { label: 'About Us', href: '/about' },
+      { label: 'Our Projects', href: '/projects' },
+      { label: 'Contact', href: '/contact' },
     ],
     legal: [
       { label: 'Privacy Policy', href: '#' },
@@ -25,12 +25,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-neutral-950 overflow-hidden">
+    <footer className="relative bg-slate-950 overflow-hidden">
       {/* Decorative top border */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-green-400 to-green-600"></div>
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-600"></div>
 
       {/* Background decoration */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
 
       {/* Main footer content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30 group-hover:scale-105 transition-transform duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-105 transition-transform duration-300">
                 <svg
                   className="w-7 h-7 text-white"
                   fill="none"
@@ -55,12 +55,12 @@ const Footer = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-xl text-white">Cloverbelt</span>
-                <span className="text-xs font-medium text-green-400 uppercase tracking-widest">
+                <span className="text-xs font-medium text-emerald-400 uppercase tracking-widest">
                   Construction
                 </span>
               </div>
             </Link>
-            <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+            <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Building Wisconsin&apos;s future since 2001. Licensed, bonded, and insured construction services for residential, commercial, and agricultural projects.
             </p>
             {/* Social links */}
@@ -69,7 +69,7 @@ const Footer = () => {
                 href="https://www.facebook.com/people/Cloverbelt-Construction/100063839118887/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-neutral-400 hover:bg-green-500 hover:border-green-500 hover:text-white transition-all duration-300"
+                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-400 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white transition-all duration-300"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ const Footer = () => {
                 href="https://x.com/cloverbeltconsn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-neutral-400 hover:bg-green-500 hover:border-green-500 hover:text-white transition-all duration-300"
+                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-400 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white transition-all duration-300"
                 aria-label="X (Twitter)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-neutral-400 text-sm hover:text-green-400 transition-colors duration-300"
+                    className="text-slate-400 text-sm hover:text-emerald-400 transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -115,7 +115,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-neutral-400 text-sm hover:text-green-400 transition-colors duration-300"
+                    className="text-slate-400 text-sm hover:text-emerald-400 transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -131,9 +131,9 @@ const Footer = () => {
               <li>
                 <a
                   href="tel:+17152894098"
-                  className="flex items-center gap-3 text-neutral-400 text-sm hover:text-green-400 transition-colors duration-300 group"
+                  className="flex items-center gap-3 text-slate-400 text-sm hover:text-emerald-400 transition-colors duration-300 group"
                 >
-                  <div className="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-green-500/20 transition-colors duration-300">
+                  <div className="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors duration-300">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                     </svg>
@@ -146,9 +146,9 @@ const Footer = () => {
                   href="https://maps.google.com/?q=2515+250th+St+Cadott+WI+54727"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-neutral-400 text-sm hover:text-green-400 transition-colors duration-300 group"
+                  className="flex items-start gap-3 text-slate-400 text-sm hover:text-emerald-400 transition-colors duration-300 group"
                 >
-                  <div className="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/20 transition-colors duration-300">
+                  <div className="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500/20 transition-colors duration-300">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
@@ -167,7 +167,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-neutral-500 text-sm">
+            <p className="text-slate-500 text-sm">
               &copy; {currentYear} Cloverbelt Construction LLC. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
@@ -175,7 +175,7 @@ const Footer = () => {
                 <Link
                   key={index}
                   href={link.href}
-                  className="text-neutral-500 text-sm hover:text-green-400 transition-colors duration-300"
+                  className="text-slate-500 text-sm hover:text-emerald-400 transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
@@ -183,10 +183,10 @@ const Footer = () => {
             </div>
           </div>
           {/* BBB mention */}
-          <div className="mt-6 flex items-center justify-center gap-2 text-neutral-600 text-xs">
+          <div className="mt-6 flex items-center justify-center gap-2 text-slate-600 text-xs">
             <span>A+ Rated by</span>
-            <span className="font-bold text-neutral-500">BBB</span>
-            <span className="text-green-500">•</span>
+            <span className="font-bold text-slate-500">BBB</span>
+            <span className="text-emerald-500">•</span>
             <span>Licensed, Bonded & Insured</span>
           </div>
         </div>
