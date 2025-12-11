@@ -11,13 +11,12 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
@@ -25,8 +24,8 @@ const Header = () => {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
-    { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
+    { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -37,62 +36,73 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg shadow-black/20'
+          ? 'bg-[#0a0a0a]/95 backdrop-blur-md'
           : 'bg-transparent'
       }`}
     >
+      {/* Top accent line */}
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-emerald-500/30">
-                <svg
-                  className="w-7 h-7 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            {/* Geometric Logo Mark */}
+            <div className="relative w-10 h-10 lg:w-11 lg:h-11">
+              {/* Building silhouette */}
+              <svg
+                viewBox="0 0 40 40"
+                className="w-full h-full"
+                fill="none"
+              >
+                {/* Main building */}
+                <rect x="8" y="12" width="12" height="22" fill="#10b981" />
+                {/* Tower */}
+                <rect x="20" y="6" width="12" height="28" fill="#059669" />
+                {/* Windows */}
+                <rect x="11" y="16" width="3" height="4" fill="#0a0a0a" opacity="0.5" />
+                <rect x="11" y="24" width="3" height="4" fill="#0a0a0a" opacity="0.5" />
+                <rect x="23" y="10" width="3" height="4" fill="#0a0a0a" opacity="0.5" />
+                <rect x="23" y="18" width="3" height="4" fill="#0a0a0a" opacity="0.5" />
+                <rect x="23" y="26" width="3" height="4" fill="#0a0a0a" opacity="0.5" />
+                {/* Ground line */}
+                <rect x="4" y="34" width="32" height="2" fill="#10b981" />
+              </svg>
             </div>
+
             <div className="flex flex-col">
-              <span className="font-bold text-xl tracking-tight transition-colors duration-300 text-white">
-                Cloverbelt
+              <span className="font-[family-name:var(--font-poppins)] font-bold text-lg lg:text-xl text-white tracking-tight">
+                CLOVERBELT
               </span>
-              <span className="text-xs font-medium uppercase tracking-widest transition-colors duration-300 text-emerald-300">
+              <span className="text-[10px] lg:text-xs text-emerald-500 tracking-[0.2em] uppercase font-medium">
                 Construction
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
+                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${
                   isActive(link.href)
-                    ? 'bg-white/10 text-white'
-                    : 'text-white/90 hover:text-white hover:bg-white/10'
+                    ? 'text-emerald-400'
+                    : 'text-white/70 hover:text-white'
                 }`}
               >
                 {link.label}
+                {isActive(link.href) && (
+                  <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-emerald-500" />
+                )}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="ml-4 px-6 py-2.5 btn-gradient text-white font-semibold text-sm rounded-lg"
+              className="ml-4 px-5 py-2.5 bg-emerald-500 text-white text-sm font-semibold hover:bg-emerald-600 transition-colors duration-300"
             >
               Get a Quote
             </Link>
@@ -101,49 +111,45 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg transition-colors duration-300 text-white"
+            className="lg:hidden p-2 text-white"
             aria-label="Toggle menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              {isMobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            <div className="w-6 h-5 relative flex flex-col justify-between">
+              <span
+                className={`w-full h-0.5 bg-current transform transition-all duration-300 origin-center ${
+                  isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+                }`}
+              />
+              <span
+                className={`w-full h-0.5 bg-current transition-all duration-300 ${
+                  isMobileMenuOpen ? 'opacity-0' : ''
+                }`}
+              />
+              <span
+                className={`w-full h-0.5 bg-current transform transition-all duration-300 origin-center ${
+                  isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                }`}
+              />
+            </div>
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`lg:hidden transition-all duration-300 overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav className="bg-slate-900/95 backdrop-blur-md border-t border-white/10 px-4 py-4 space-y-1">
+        <nav className="bg-[#111111] border-t border-white/5 px-4 py-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`block px-4 py-3 font-medium rounded-lg transition-colors duration-200 ${
+              className={`block px-4 py-3 text-sm font-medium border-l-2 transition-all duration-200 ${
                 isActive(link.href)
-                  ? 'bg-emerald-500/20 text-emerald-400'
-                  : 'text-white/90 hover:bg-white/10 hover:text-white'
+                  ? 'border-emerald-500 text-emerald-400 bg-emerald-500/5'
+                  : 'border-transparent text-white/70 hover:text-white hover:border-white/20'
               }`}
             >
               {link.label}
@@ -151,12 +157,19 @@ const Header = () => {
           ))}
           <Link
             href="/contact"
-            className="block mt-4 px-4 py-3 btn-gradient text-white font-semibold text-center rounded-lg"
+            className="block mt-4 mx-4 px-4 py-3 bg-emerald-500 text-white text-sm font-semibold text-center hover:bg-emerald-600 transition-colors"
           >
             Get a Quote
           </Link>
         </nav>
       </div>
+
+      {/* Bottom border when scrolled */}
+      <div
+        className={`h-px bg-white/5 transition-opacity duration-300 ${
+          isScrolled ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
     </header>
   );
 };

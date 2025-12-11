@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageHeader from '@/components/PageHeader';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Us | Cloverbelt Construction',
@@ -15,7 +16,7 @@ const values = [
       </svg>
     ),
     title: 'Quality First',
-    description: 'Every project receives our full commitment to excellence and attention to detail.',
+    description: 'Every project receives our full commitment to excellence.',
   },
   {
     icon: (
@@ -24,7 +25,7 @@ const values = [
       </svg>
     ),
     title: 'On-Time Delivery',
-    description: 'We respect your timeline and deliver projects on schedule, every time.',
+    description: 'We respect your timeline and deliver projects on schedule.',
   },
   {
     icon: (
@@ -33,31 +34,31 @@ const values = [
       </svg>
     ),
     title: 'Fair Pricing',
-    description: 'Transparent, competitive pricing with no hidden costs or surprises.',
+    description: 'Transparent, competitive pricing with no hidden costs.',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
       </svg>
     ),
-    title: 'Craftsmanship',
-    description: 'Skilled professionals dedicated to superior construction standards.',
+    title: 'Expert Team',
+    description: 'Skilled professionals dedicated to superior standards.',
   },
 ];
 
 const milestones = [
   { year: '2001', event: 'Company Founded', description: 'Started operations in Cadott, WI' },
-  { year: '2003', event: 'LLC Established', description: 'Officially incorporated as Cloverbelt Construction LLC' },
+  { year: '2003', event: 'LLC Established', description: 'Incorporated as Cloverbelt Construction LLC' },
   { year: '2010', event: 'Service Expansion', description: 'Expanded to commercial and agricultural' },
   { year: '2015', event: 'Equipment Upgrade', description: 'Major investment in modern equipment' },
-  { year: '2020', event: 'Team Growth', description: 'Expanded team in the Chippewa Valley' },
+  { year: '2020', event: 'Team Growth', description: 'Expanded team across the Chippewa Valley' },
   { year: '2024', event: 'A+ BBB Rating', description: 'Recognized for exceptional service' },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="bg-slate-950">
+    <div className="bg-[#0a0a0a]">
       <PageHeader
         badge="About Us"
         title="Building Trust Since"
@@ -66,128 +67,156 @@ export default function AboutPage() {
       />
 
       {/* Story Section */}
-      <section className="relative py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 technical-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left Content - Story */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Content */}
             <div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Story
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-[2px] bg-emerald-500" />
+                <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider">
+                  Our Story
+                </span>
+              </div>
+              <h2 className="font-[family-name:var(--font-poppins)] text-3xl lg:text-4xl font-bold text-white mb-6">
+                Quality Construction, Honest Service
               </h2>
-              <p className="text-base lg:text-lg text-slate-400 mb-6 leading-relaxed">
+              <p className="text-white/60 leading-relaxed mb-6">
                 Cloverbelt Construction LLC was founded by Josh R. Spaeth with a simple mission: to provide quality construction services with honesty and integrity. What started as a small residential construction company has grown into a full-service construction firm serving the entire Chippewa Valley region.
               </p>
-              <p className="text-slate-400 mb-6 leading-relaxed">
+              <p className="text-white/60 leading-relaxed mb-8">
                 We&apos;ve built our reputation on quality craftsmanship, honest communication, and customer satisfaction. From residential homes to commercial buildings and agricultural facilities, we bring the same dedication and expertise to every project.
               </p>
-              <p className="text-slate-400 leading-relaxed">
-                Today, we&apos;re proud to be one of the most trusted construction companies in the area, with an A+ rating from the Better Business Bureau and hundreds of satisfied customers throughout Wisconsin.
-              </p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { value: '20+', label: 'Years Experience' },
+                  { value: '500+', label: 'Projects Completed' },
+                  { value: 'A+', label: 'BBB Rating' },
+                  { value: '100%', label: 'Satisfaction' },
+                ].map((stat, index) => (
+                  <div key={index} className="p-4 border border-white/5">
+                    <div className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-emerald-400">
+                      {stat.value}
+                    </div>
+                    <div className="text-white/40 text-sm uppercase tracking-wider">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Right Content - Values */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              {values.map((value, index) => (
-                <div
-                  key={index}
-                  className="group p-5 lg:p-6 bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/[0.05] hover:border-emerald-500/30 hover:bg-white/[0.05] transition-all duration-300"
-                >
-                  <div className="w-11 h-11 lg:w-12 lg:h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-300">
-                    {value.icon}
-                  </div>
-                  <h3 className="font-semibold text-white mb-2 group-hover:text-emerald-300 transition-colors">{value.title}</h3>
-                  <p className="text-sm text-slate-400">{value.description}</p>
-                </div>
-              ))}
+            {/* Image */}
+            <div className="relative">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/construction-1.jpg"
+                  alt="Cloverbelt Construction team"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 border-2 border-emerald-500/30 hidden lg:block" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="relative py-16 lg:py-24 bg-[#111111]">
+        <div className="absolute inset-0 blueprint-grid opacity-20" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-12 h-[2px] bg-emerald-500" />
+              <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider">
+                Our Values
+              </span>
+              <div className="w-12 h-[2px] bg-emerald-500" />
+            </div>
+            <h2 className="font-[family-name:var(--font-poppins)] text-3xl lg:text-4xl font-bold text-white">
+              What Sets Us Apart
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((value, index) => (
+              <div key={index} className="group p-6 card-architectural text-center">
+                <div className="w-12 h-12 mx-auto flex items-center justify-center border border-emerald-500/30 text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:text-white group-hover:border-emerald-500 transition-all duration-300">
+                  {value.icon}
+                </div>
+                <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-white/50 text-sm">{value.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Timeline Section */}
-      <section className="relative py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent"></div>
+      <section className="relative py-16 lg:py-24">
+        <div className="absolute inset-0 technical-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-6 glass">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-              <span className="text-emerald-300 text-sm font-medium">Our Journey</span>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-12 h-[2px] bg-emerald-500" />
+              <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider">
+                Our Journey
+              </span>
+              <div className="w-12 h-[2px] bg-emerald-500" />
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="font-[family-name:var(--font-poppins)] text-3xl lg:text-4xl font-bold text-white">
               Key Milestones
             </h2>
-            <p className="text-base lg:text-lg text-slate-400 max-w-2xl mx-auto">
-              A look at our growth and achievements over the years
-            </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {milestones.map((milestone, index) => (
-              <div
-                key={index}
-                className="group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-white/[0.05] hover:border-emerald-500/30 transition-all duration-300"
-              >
+              <div key={index} className="group p-6 card-architectural">
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 lg:w-16 lg:h-16 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 transition-all duration-300 flex-shrink-0">
-                    <span className="text-sm font-bold text-emerald-400 group-hover:text-white transition-colors duration-300">
+                  <div className="w-14 h-14 flex items-center justify-center border border-emerald-500/30 flex-shrink-0 group-hover:bg-emerald-500 group-hover:border-emerald-500 transition-all duration-300">
+                    <span className="font-[family-name:var(--font-poppins)] text-sm font-bold text-emerald-400 group-hover:text-white transition-colors">
                       {milestone.year}
                     </span>
                   </div>
-                  <div className="min-w-0">
-                    <h3 className="text-base lg:text-lg font-semibold text-white mb-1 group-hover:text-emerald-300 transition-colors duration-300">
+                  <div>
+                    <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-1">
                       {milestone.event}
                     </h3>
-                    <p className="text-sm text-slate-400">{milestone.description}</p>
+                    <p className="text-white/50 text-sm">{milestone.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
-          {/* BBB Badge */}
-          <div className="mt-12 lg:mt-16 flex justify-center">
-            <div className="inline-flex items-center gap-4 bg-white/[0.03] backdrop-blur-sm border border-white/[0.05] rounded-2xl px-6 lg:px-8 py-5 lg:py-6">
-              <div className="w-14 h-14 lg:w-16 lg:h-16 bg-white rounded-xl flex items-center justify-center flex-shrink-0">
-                <span className="text-xl lg:text-2xl font-black text-blue-800">BBB</span>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-white font-semibold text-base lg:text-lg">A+ Rated</span>
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-slate-400 text-sm">Better Business Bureau</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 lg:py-28 overflow-hidden">
+      <section className="relative py-16 lg:py-24 bg-[#111111]">
+        <div className="absolute inset-0 blueprint-grid opacity-20" />
+
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-3xl font-bold text-white mb-6">
             Let&apos;s Build Something Great Together
           </h2>
-          <p className="text-base lg:text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/60 mb-8 max-w-2xl mx-auto">
             Ready to start your next project? Contact us for a free consultation and estimate.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 btn-gradient text-white font-semibold rounded-xl text-sm lg:text-base"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-colors"
           >
             Get in Touch
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

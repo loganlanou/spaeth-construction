@@ -61,7 +61,7 @@ const services = [
   {
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
       </svg>
     ),
     title: 'Demolition Services',
@@ -72,7 +72,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="bg-slate-950">
+    <div className="bg-[#0a0a0a]">
       <PageHeader
         badge="Our Services"
         title="Comprehensive Construction"
@@ -81,47 +81,38 @@ export default function ServicesPage() {
       />
 
       {/* Services Grid */}
-      <section className="relative py-20 lg:py-28 overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-0 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-emerald-600/5 rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 technical-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/[0.05] hover:border-emerald-500/30 hover:bg-white/[0.05] transition-all duration-500"
+                className="group p-6 lg:p-8 card-architectural"
               >
-                {/* Icon */}
-                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-300">
+                <div className="w-14 h-14 flex items-center justify-center border border-emerald-500/30 text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-white group-hover:border-emerald-500 transition-all duration-300">
                   {service.icon}
                 </div>
 
-                {/* Content */}
-                <h3 className="text-lg lg:text-xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors duration-300">
+                <h3 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-slate-400 text-sm lg:text-base mb-6 leading-relaxed">
+
+                <p className="text-white/50 text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
 
-                {/* Features */}
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2 text-sm text-slate-500">
+                    <li key={featureIndex} className="flex items-center gap-2 text-sm">
                       <svg className="w-4 h-4 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-slate-400">{feature}</span>
+                      <span className="text-white/40">{feature}</span>
                     </li>
                   ))}
                 </ul>
-
-                {/* Hover accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
             ))}
           </div>
@@ -129,22 +120,22 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/20 to-transparent"></div>
+      <section className="relative py-16 lg:py-24 bg-[#111111]">
+        <div className="absolute inset-0 blueprint-grid opacity-20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-3xl font-bold text-white mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-base lg:text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/60 mb-8 max-w-2xl mx-auto">
             Contact us today for a free consultation and estimate. We&apos;ll work with you to bring your vision to life.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 btn-gradient text-white font-semibold rounded-xl text-sm lg:text-base"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-colors"
           >
             Get a Free Quote
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

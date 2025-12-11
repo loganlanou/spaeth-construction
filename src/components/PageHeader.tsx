@@ -3,46 +3,44 @@
 interface PageHeaderProps {
   badge: string;
   title: string;
-  highlight: string;
+  highlight?: string;
   description: string;
 }
 
 const PageHeader = ({ badge, title, highlight, description }: PageHeaderProps) => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-24 hero-bg overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl"></div>
-      </div>
+    <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-[#0a0a0a] overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 blueprint-grid opacity-40" />
 
-      {/* Grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }}
-      ></div>
+      {/* Geometric Decorations */}
+      <div className="absolute top-20 right-10 w-40 h-40 border border-emerald-500/10 hidden lg:block" />
+      <div className="absolute bottom-10 left-10 w-24 h-24 border border-white/5 hidden lg:block" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-6 glass">
-          <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-          <span className="text-emerald-300 text-sm font-medium">{badge}</span>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-12 h-[2px] bg-emerald-500" />
+          <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider">
+            {badge}
+          </span>
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        <h1 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl">
           {title}
-          <span className="block text-gradient mt-2">{highlight}</span>
+          {highlight && (
+            <span className="block text-emerald-400 mt-2">{highlight}</span>
+          )}
         </h1>
 
         {/* Description */}
-        <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
+        <p className="text-lg text-white/60 max-w-2xl leading-relaxed">
           {description}
         </p>
+
+        {/* Bottom Line */}
+        <div className="mt-12 h-px bg-gradient-to-r from-emerald-500/50 via-white/10 to-transparent max-w-xl" />
       </div>
     </section>
   );
