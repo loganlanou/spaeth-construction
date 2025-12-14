@@ -78,7 +78,7 @@ export default function ContactPage() {
         title="Let's Build"
         highlight="Together"
         description="Ready to start your project? Contact us for a free consultation and estimate."
-        backgroundImage="/images/gallery/construction-site-3.jpg"
+        backgroundImage="/spaeth-construction/images/gallery/construction-site-3.jpg"
       />
 
       {/* Contact Section */}

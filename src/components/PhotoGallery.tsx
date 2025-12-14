@@ -3,26 +3,28 @@
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
+const basePath = '/spaeth-construction';
+
 const galleryImages = [
-  { src: '/images/gallery/construction-site-1.jpg', alt: 'Construction site overview', category: 'Construction' },
-  { src: '/images/gallery/construction-site-2.jpg', alt: 'Building under construction', category: 'Construction' },
-  { src: '/images/gallery/construction-site-3.jpg', alt: 'Construction progress', category: 'Construction' },
-  { src: '/images/gallery/concrete-pour-1.jpg', alt: 'Concrete pouring', category: 'Concrete' },
-  { src: '/images/gallery/concrete-work-1.jpg', alt: 'Concrete finishing work', category: 'Concrete' },
-  { src: '/images/gallery/concrete-finishing.jpg', alt: 'Concrete surface finishing', category: 'Concrete' },
-  { src: '/images/gallery/foundation-work.jpg', alt: 'Foundation construction', category: 'Foundation' },
-  { src: '/images/gallery/excavator-work.jpg', alt: 'Excavator at work', category: 'Excavation' },
-  { src: '/images/gallery/heavy-equipment.jpg', alt: 'Heavy construction equipment', category: 'Equipment' },
-  { src: '/images/gallery/building-frame.jpg', alt: 'Building frame structure', category: 'Construction' },
-  { src: '/images/gallery/worker-welding.jpg', alt: 'Worker welding steel', category: 'Steel Work' },
-  { src: '/images/gallery/steel-structure.jpg', alt: 'Steel building structure', category: 'Steel Work' },
-  { src: '/images/gallery/crane-work.jpg', alt: 'Crane lifting materials', category: 'Equipment' },
-  { src: '/images/gallery/commercial-building.jpg', alt: 'Commercial building exterior', category: 'Commercial' },
-  { src: '/images/gallery/barn-construction.jpg', alt: 'Agricultural barn', category: 'Agricultural' },
-  { src: '/images/gallery/site-grading.jpg', alt: 'Site grading work', category: 'Excavation' },
-  { src: '/images/gallery/residential-build.jpg', alt: 'Residential construction', category: 'Residential' },
-  { src: '/images/gallery/bulldozer-work.jpg', alt: 'Bulldozer clearing land', category: 'Excavation' },
-  { src: '/images/gallery/workers-site.jpg', alt: 'Construction workers on site', category: 'Team' },
+  { src: `${basePath}/images/gallery/construction-site-1.jpg`, alt: 'Construction site overview', category: 'Construction' },
+  { src: `${basePath}/images/gallery/construction-site-2.jpg`, alt: 'Building under construction', category: 'Construction' },
+  { src: `${basePath}/images/gallery/construction-site-3.jpg`, alt: 'Construction progress', category: 'Construction' },
+  { src: `${basePath}/images/gallery/concrete-pour-1.jpg`, alt: 'Concrete pouring', category: 'Concrete' },
+  { src: `${basePath}/images/gallery/concrete-work-1.jpg`, alt: 'Concrete finishing work', category: 'Concrete' },
+  { src: `${basePath}/images/gallery/concrete-finishing.jpg`, alt: 'Concrete surface finishing', category: 'Concrete' },
+  { src: `${basePath}/images/gallery/foundation-work.jpg`, alt: 'Foundation construction', category: 'Foundation' },
+  { src: `${basePath}/images/gallery/excavator-work.jpg`, alt: 'Excavator at work', category: 'Excavation' },
+  { src: `${basePath}/images/gallery/heavy-equipment.jpg`, alt: 'Heavy construction equipment', category: 'Equipment' },
+  { src: `${basePath}/images/gallery/building-frame.jpg`, alt: 'Building frame structure', category: 'Construction' },
+  { src: `${basePath}/images/gallery/worker-welding.jpg`, alt: 'Worker welding steel', category: 'Steel Work' },
+  { src: `${basePath}/images/gallery/steel-structure.jpg`, alt: 'Steel building structure', category: 'Steel Work' },
+  { src: `${basePath}/images/gallery/crane-work.jpg`, alt: 'Crane lifting materials', category: 'Equipment' },
+  { src: `${basePath}/images/gallery/commercial-building.jpg`, alt: 'Commercial building exterior', category: 'Commercial' },
+  { src: `${basePath}/images/gallery/barn-construction.jpg`, alt: 'Agricultural barn', category: 'Agricultural' },
+  { src: `${basePath}/images/gallery/site-grading.jpg`, alt: 'Site grading work', category: 'Excavation' },
+  { src: `${basePath}/images/gallery/residential-build.jpg`, alt: 'Residential construction', category: 'Residential' },
+  { src: `${basePath}/images/gallery/bulldozer-work.jpg`, alt: 'Bulldozer clearing land', category: 'Excavation' },
+  { src: `${basePath}/images/gallery/workers-site.jpg`, alt: 'Construction workers on site', category: 'Team' },
 ];
 
 export default function PhotoGallery() {

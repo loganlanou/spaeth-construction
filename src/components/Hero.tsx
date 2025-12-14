@@ -7,39 +7,41 @@ import Image from 'next/image';
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const basePath = '/spaeth-construction';
+
   const slides = [
     {
-      image: '/images/gallery/construction-site-1.jpg',
+      image: `${basePath}/images/gallery/construction-site-1.jpg`,
       title: 'Building',
       highlight: "Wisconsin's Future",
       subtitle: 'Premier construction services for residential, commercial, and agricultural projects throughout the Chippewa Valley.',
     },
     {
-      image: '/images/gallery/excavator-work.jpg',
+      image: `${basePath}/images/gallery/excavator-work.jpg`,
       title: 'Quality',
       highlight: 'Craftsmanship',
       subtitle: 'Over 20 years of experience delivering excellence in every project we undertake.',
     },
     {
-      image: '/images/gallery/crane-work.jpg',
+      image: `${basePath}/images/gallery/crane-work.jpg`,
       title: 'Your Vision',
       highlight: 'Our Expertise',
       subtitle: 'From concept to completion, we bring your construction dreams to life.',
     },
     {
-      image: '/images/gallery/concrete-pour-1.jpg',
+      image: `${basePath}/images/gallery/concrete-pour-1.jpg`,
       title: 'Expert',
       highlight: 'Concrete Work',
       subtitle: 'Professional concrete services for foundations, driveways, patios and decorative flatwork.',
     },
     {
-      image: '/images/gallery/barn-construction.jpg',
+      image: `${basePath}/images/gallery/barn-construction.jpg`,
       title: 'Agricultural',
       highlight: 'Construction',
       subtitle: 'Specialized barn and farm building construction built for Wisconsin conditions.',
     },
     {
-      image: '/images/gallery/commercial-building.jpg',
+      image: `${basePath}/images/gallery/commercial-building.jpg`,
       title: 'Commercial',
       highlight: 'Excellence',
       subtitle: 'Full-scale commercial construction for businesses that demand quality.',

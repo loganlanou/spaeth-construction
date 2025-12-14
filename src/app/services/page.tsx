@@ -85,7 +85,7 @@ export default function ServicesPage() {
         title="Comprehensive Construction"
         highlight="Solutions"
         description="From concept to completion, we deliver excellence across residential, commercial, and agricultural projects throughout Wisconsin."
-        backgroundImage="/images/gallery/worker-welding.jpg"
+        backgroundImage="/spaeth-construction/images/gallery/worker-welding.jpg"
       />
 
       {/* Services Grid */}

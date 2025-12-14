@@ -103,7 +103,7 @@ const About = () => {
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden mb-8">
                 <Image
-                  src="/images/construction-2.jpg"
+                  src="/spaeth-construction/images/gallery/team-planning.jpg"
                   alt="Cloverbelt Construction team"
                   fill
                   className="object-cover"

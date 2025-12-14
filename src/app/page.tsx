@@ -23,7 +23,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
                 <Image
-                  src="/images/gallery/workers-site.jpg"
+                  src="/spaeth-construction/images/gallery/workers-site.jpg"
                   alt="Quality construction work"
                   fill
                   className="object-cover"

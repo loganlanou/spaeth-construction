@@ -108,7 +108,7 @@ export default function ProjectsPage() {
         title="Featured"
         highlight="Projects"
         description="A showcase of our craftsmanship across residential, commercial, and agricultural construction."
-        backgroundImage="/images/gallery/construction-site-2.jpg"
+        backgroundImage="/spaeth-construction/images/gallery/construction-site-2.jpg"
       />
 
       {/* Projects Section */}
