@@ -3,6 +3,8 @@ import Services from '@/components/Services';
 import Projects from '@/components/Projects';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
+import PhotoGallery from '@/components/PhotoGallery';
+import VideoShowcase from '@/components/VideoShowcase';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -96,6 +98,12 @@ export default function Home() {
 
       {/* Services Overview */}
       <Services />
+
+      {/* Photo Gallery */}
+      <PhotoGallery />
+
+      {/* Video Showcase */}
+      <VideoShowcase />
 
       {/* Project Portfolio */}
       <Projects />

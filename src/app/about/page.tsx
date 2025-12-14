@@ -64,7 +64,7 @@ export default function AboutPage() {
         title="Building Trust Since"
         highlight="2001"
         description="A licensed, bonded, and insured construction company proudly serving Cadott, Wisconsin and the surrounding communities."
-        backgroundImage="/images/construction-1.jpg"
+        backgroundImage="/images/gallery/workers-site.jpg"
       />
 
       {/* Story Section */}
@@ -115,7 +115,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/construction-2.jpg"
+                  src="/images/gallery/team-planning.jpg"
                   alt="Cloverbelt Construction team"
                   fill
                   className="object-cover"

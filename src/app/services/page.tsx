@@ -18,7 +18,7 @@ const services = [
     title: 'Commercial Construction',
     description: 'Full-scale commercial building projects including retail spaces, offices, and industrial facilities. Quality craftsmanship for businesses that demand excellence.',
     features: ['Office Buildings', 'Retail Spaces', 'Industrial Facilities', 'Renovations'],
-    image: '/images/construction-1.jpg',
+    image: '/images/gallery/commercial-building.jpg',
   },
   {
     icon: (
@@ -29,7 +29,7 @@ const services = [
     title: 'Agricultural Buildings',
     description: 'Specialized agricultural construction including barns, storage facilities, and manure pits. Built to withstand Wisconsin\'s demanding conditions.',
     features: ['Barn Construction', 'Storage Buildings', 'Manure Pits', 'Equipment Sheds'],
-    image: '/images/construction-2.jpg',
+    image: '/images/gallery/barn-construction.jpg',
   },
   {
     icon: (
@@ -40,7 +40,7 @@ const services = [
     title: 'Residential Construction',
     description: 'Custom home building and residential projects tailored to your vision. From foundations to finishing touches, we build homes that last.',
     features: ['Custom Homes', 'Garages', 'Additions', 'Remodeling'],
-    image: '/images/construction-3.jpg',
+    image: '/images/gallery/residential-build.jpg',
   },
   {
     icon: (
@@ -51,7 +51,7 @@ const services = [
     title: 'Concrete Work',
     description: 'Expert concrete services including decorative flatwork, stamped patios, driveways, and reinforced foundations. Precision pours every time.',
     features: ['Stamped Concrete', 'Decorative Flatwork', 'Driveways', 'Foundations'],
-    image: '/images/concrete.jpg',
+    image: '/images/gallery/concrete-pour-1.jpg',
   },
   {
     icon: (
@@ -62,7 +62,7 @@ const services = [
     title: 'Excavation & Land Clearing',
     description: 'Professional excavation and land preparation services. We prepare your site for construction with precision and efficiency.',
     features: ['Site Preparation', 'Land Clearing', 'Grading', 'Trenching'],
-    image: '/images/excavator.jpg',
+    image: '/images/gallery/excavator-work.jpg',
   },
   {
     icon: (
@@ -73,7 +73,7 @@ const services = [
     title: 'Demolition Services',
     description: 'Safe and efficient demolition services for structures of all sizes. We handle removal and site cleanup professionally.',
     features: ['Building Demolition', 'Interior Gutting', 'Debris Removal', 'Site Cleanup'],
-    image: '/images/construction-1.jpg',
+    image: '/images/gallery/bulldozer-work.jpg',
   },
 ];
 
@@ -85,7 +85,7 @@ export default function ServicesPage() {
         title="Comprehensive Construction"
         highlight="Solutions"
         description="From concept to completion, we deliver excellence across residential, commercial, and agricultural projects throughout Wisconsin."
-        backgroundImage="/images/construction-2.jpg"
+        backgroundImage="/images/gallery/worker-welding.jpg"
       />
 
       {/* Services Grid */}

@@ -11,63 +11,84 @@ const projects = [
     title: 'Office Complex Foundation',
     description: 'Complete foundation and concrete work for a 20,000 sq ft commercial office building.',
     stats: ['20,000 sq ft', '45 Days', 'Cadott, WI'],
-    image: '/images/construction-1.jpg',
+    image: '/images/gallery/commercial-building.jpg',
   },
   {
     category: 'Agricultural',
     title: 'Dairy Barn Construction',
     description: 'Full agricultural building including structural work and specialized flooring.',
     stats: ['150 Head Capacity', '90 Days', 'Chippewa Falls'],
-    image: '/images/construction-2.jpg',
+    image: '/images/gallery/barn-construction.jpg',
   },
   {
     category: 'Residential',
     title: 'Custom Home Build',
     description: 'Complete residential construction from foundation to finishing for a 3,500 sq ft home.',
     stats: ['3,500 sq ft', '6 Months', 'Eau Claire'],
-    image: '/images/construction-3.jpg',
+    image: '/images/gallery/residential-build.jpg',
   },
   {
     category: 'Concrete',
     title: 'Decorative Patio Project',
     description: 'Stamped concrete patio with custom patterns and integrated drainage system.',
     stats: ['1,200 sq ft', '2 Weeks', 'Stanley, WI'],
-    image: '/images/concrete.jpg',
+    image: '/images/gallery/concrete-finishing.jpg',
   },
   {
     category: 'Excavation',
     title: 'Site Development',
     description: 'Land clearing and site preparation for a new residential subdivision.',
     stats: ['15 Acres', '30 Days', 'Boyd, WI'],
-    image: '/images/excavator.jpg',
+    image: '/images/gallery/bulldozer-work.jpg',
   },
   {
     category: 'Commercial',
     title: 'Retail Expansion',
     description: 'Building expansion and parking lot construction for local retail business.',
     stats: ['8,000 sq ft', '60 Days', 'Cadott, WI'],
-    image: '/images/construction-1.jpg',
+    image: '/images/gallery/construction-site-1.jpg',
   },
   {
     category: 'Agricultural',
     title: 'Equipment Storage Building',
     description: 'Large-scale equipment storage facility with concrete flooring.',
     stats: ['10,000 sq ft', '45 Days', 'Thorp, WI'],
-    image: '/images/construction-2.jpg',
+    image: '/images/gallery/steel-structure.jpg',
   },
   {
     category: 'Residential',
     title: 'Garage Addition',
     description: 'Three-car attached garage with workshop space and heated floors.',
     stats: ['900 sq ft', '4 Weeks', 'Cadott, WI'],
-    image: '/images/construction-3.jpg',
+    image: '/images/gallery/building-frame.jpg',
   },
   {
     category: 'Concrete',
     title: 'Commercial Foundation',
     description: 'Reinforced concrete foundation for multi-story commercial building.',
     stats: ['5,000 sq ft', '3 Weeks', 'Eau Claire'],
-    image: '/images/concrete.jpg',
+    image: '/images/gallery/foundation-work.jpg',
+  },
+  {
+    category: 'Excavation',
+    title: 'Land Clearing Project',
+    description: 'Complete site clearing and grading for new commercial development.',
+    stats: ['25 Acres', '6 Weeks', 'Bloomer, WI'],
+    image: '/images/gallery/excavator-work.jpg',
+  },
+  {
+    category: 'Commercial',
+    title: 'Steel Framework',
+    description: 'Structural steel erection for industrial warehouse facility.',
+    stats: ['35,000 sq ft', '3 Months', 'Eau Claire'],
+    image: '/images/gallery/crane-work.jpg',
+  },
+  {
+    category: 'Concrete',
+    title: 'Industrial Floor Pour',
+    description: 'Heavy-duty concrete flooring for manufacturing facility.',
+    stats: ['12,000 sq ft', '4 Weeks', 'Chippewa Falls'],
+    image: '/images/gallery/concrete-pour-1.jpg',
   },
 ];
 
@@ -87,7 +108,7 @@ export default function ProjectsPage() {
         title="Featured"
         highlight="Projects"
         description="A showcase of our craftsmanship across residential, commercial, and agricultural construction."
-        backgroundImage="/images/construction-3.jpg"
+        backgroundImage="/images/gallery/construction-site-2.jpg"
       />
 
       {/* Projects Section */}
