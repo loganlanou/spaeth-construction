@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 const videos = [
   {
@@ -139,7 +140,7 @@ export default function VideoShowcase() {
         {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-white/50 text-sm mb-4">Want to see more of our work?</p>
-          <a
+          <Link
             href="/projects"
             className="inline-flex items-center gap-2 px-6 py-3 border border-green-500/50 text-green-400 font-medium hover:bg-green-600 hover:border-green-600 hover:text-white transition-all duration-300"
           >
@@ -147,7 +148,7 @@ export default function VideoShowcase() {
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

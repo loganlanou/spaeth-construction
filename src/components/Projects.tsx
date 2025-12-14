@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -156,7 +157,7 @@ const Projects = () => {
 
         {/* CTA */}
         <div className="text-center mt-12 xl:mt-16">
-          <a
+          <Link
             href="/projects"
             className="inline-flex items-center gap-2 text-green-400 font-semibold text-base lg:text-lg hover:text-green-300 transition-colors duration-300 group"
           >
@@ -164,7 +165,7 @@ const Projects = () => {
             <svg className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
