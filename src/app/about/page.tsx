@@ -58,7 +58,7 @@ const milestones = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-black">
+    <div className="bg-[#0a0a0a]">
       <PageHeader
         badge="About Us"
         title="Building Trust Since"
@@ -68,7 +68,7 @@ export default function AboutPage() {
       />
 
       {/* Story Section */}
-      <section className="relative py-16 lg:py-24 overflow-hidden">
+      <section className="relative py-16 lg:py-24 xl:py-32 overflow-hidden">
         <div className="absolute inset-0 construction-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,13 +81,13 @@ export default function AboutPage() {
                   Our Story
                 </span>
               </div>
-              <h2 className="font-[family-name:var(--font-poppins)] text-3xl lg:text-4xl font-bold text-white mb-6">
+              <h2 className="font-[family-name:var(--font-poppins)] text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
                 Quality Construction, Honest Service
               </h2>
-              <p className="text-white/60 leading-relaxed mb-6">
+              <p className="text-white/60 leading-relaxed mb-6 xl:text-lg">
                 Cloverbelt Construction LLC was founded by Josh R. Spaeth with a simple mission: to provide quality construction services with honesty and integrity. What started as a small residential construction company has grown into a full-service construction firm serving the entire Chippewa Valley region.
               </p>
-              <p className="text-white/60 leading-relaxed mb-8">
+              <p className="text-white/60 leading-relaxed mb-8 xl:text-lg">
                 We&apos;ve built our reputation on quality craftsmanship, honest communication, and customer satisfaction. From residential homes to commercial buildings and agricultural facilities, we bring the same dedication and expertise to every project.
               </p>
 
@@ -130,7 +130,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="relative py-16 lg:py-24 bg-[#050505]">
+      <section className="relative py-16 lg:py-24 xl:py-32 bg-[#111111]">
         <div className="absolute inset-0 blueprint-grid opacity-20" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,16 +147,16 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
             {values.map((value, index) => (
-              <div key={index} className="group p-6 bg-[#0a0a0a] border border-green-600/10 hover:border-green-500/40 transition-all duration-300 text-center">
-                <div className="w-12 h-12 mx-auto flex items-center justify-center border border-green-500/30 text-green-400 mb-4 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-300">
+              <div key={index} className="group p-6 xl:p-8 bg-[#0a0a0a] border border-green-600/20 hover:border-green-500/40 transition-all duration-300 text-center">
+                <div className="w-12 h-12 xl:w-14 xl:h-14 mx-auto flex items-center justify-center border border-green-500/30 text-green-400 mb-4 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-300">
                   {value.icon}
                 </div>
-                <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
+                <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-2 xl:text-lg group-hover:text-green-400 transition-colors">
                   {value.title}
                 </h3>
-                <p className="text-white/50 text-sm">{value.description}</p>
+                <p className="text-white/50 text-sm xl:text-base">{value.description}</p>
               </div>
             ))}
           </div>
@@ -164,7 +164,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="relative py-16 lg:py-24">
+      <section className="relative py-16 lg:py-24 xl:py-32">
         <div className="absolute inset-0 construction-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,20 +181,20 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
             {milestones.map((milestone, index) => (
-              <div key={index} className="group p-6 bg-[#111111] border border-green-600/10 hover:border-green-500/40 transition-all duration-300">
+              <div key={index} className="group p-6 xl:p-8 bg-[#111111] border border-green-600/20 hover:border-green-500/40 transition-all duration-300">
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 flex items-center justify-center border border-green-500/30 flex-shrink-0 group-hover:bg-green-600 group-hover:border-green-600 transition-all duration-300">
-                    <span className="font-[family-name:var(--font-poppins)] text-sm font-bold text-green-400 group-hover:text-white transition-colors">
+                  <div className="w-14 h-14 xl:w-16 xl:h-16 flex items-center justify-center border border-green-500/30 flex-shrink-0 group-hover:bg-green-600 group-hover:border-green-600 transition-all duration-300">
+                    <span className="font-[family-name:var(--font-poppins)] text-sm xl:text-base font-bold text-green-400 group-hover:text-white transition-colors">
                       {milestone.year}
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-1 group-hover:text-green-400 transition-colors">
+                    <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-1 xl:text-lg group-hover:text-green-400 transition-colors">
                       {milestone.event}
                     </h3>
-                    <p className="text-white/50 text-sm">{milestone.description}</p>
+                    <p className="text-white/50 text-sm xl:text-base">{milestone.description}</p>
                   </div>
                 </div>
               </div>
@@ -204,22 +204,22 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 lg:py-24 bg-green-600 overflow-hidden">
+      <section className="relative py-16 lg:py-24 xl:py-32 bg-green-600 overflow-hidden">
         <div className="absolute inset-0 construction-stripes opacity-20" />
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-4xl font-bold text-white mb-6">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
             Let&apos;s Build Something Great Together
           </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
+          <p className="text-white/90 mb-8 lg:mb-10 max-w-2xl mx-auto text-lg xl:text-xl">
             Ready to start your next project? Contact us for a free consultation and estimate.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-bold hover:bg-green-50 transition-colors shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 lg:px-10 lg:py-5 xl:px-12 xl:py-6 bg-white text-green-700 text-base lg:text-lg font-bold hover:bg-green-50 transition-colors shadow-xl rounded group"
           >
-            Get in Touch
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            Get Free Estimate
+            <svg className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

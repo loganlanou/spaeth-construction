@@ -60,7 +60,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative py-24 lg:py-32 bg-[#050505] overflow-hidden"
+      className="relative py-24 lg:py-32 xl:py-40 bg-[#0a0a0a] overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 blueprint-grid opacity-20" />
@@ -102,14 +102,14 @@ const Projects = () => {
         </div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-[#0a0a0a] border border-green-600/10 hover:border-green-500/40 transition-all duration-500"
+              className="group relative overflow-hidden bg-[#111111] border border-green-600/20 hover:border-green-500/40 transition-all duration-500"
             >
               {/* Project image */}
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-56 xl:h-64 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -127,11 +127,11 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
+              <div className="p-6 xl:p-8">
+                <h3 className="font-[family-name:var(--font-poppins)] text-xl xl:text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-white/60 text-sm mb-4 leading-relaxed">
+                <p className="text-white/60 text-sm xl:text-base mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -155,14 +155,13 @@ const Projects = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-white/50 mb-4">Want to see your project featured here?</p>
+        <div className="text-center mt-12 xl:mt-16">
           <a
-            href="/contact"
-            className="inline-flex items-center gap-2 text-green-400 font-semibold hover:text-green-300 transition-colors duration-300 group"
+            href="/projects"
+            className="inline-flex items-center gap-2 text-green-400 font-semibold text-base lg:text-lg hover:text-green-300 transition-colors duration-300 group"
           >
-            Start Your Project
-            <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            View All Projects
+            <svg className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>

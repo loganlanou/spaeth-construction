@@ -12,7 +12,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({ badge, title, highlight, description, backgroundImage = '/images/construction-1.jpg' }: PageHeaderProps) => {
   return (
-    <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-black overflow-hidden">
+    <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 xl:pt-48 xl:pb-32 bg-[#0a0a0a] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -22,7 +22,7 @@ const PageHeader = ({ badge, title, highlight, description, backgroundImage = '/
           className="object-cover opacity-20"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/90 to-[#0a0a0a]" />
       </div>
 
       {/* Grid Pattern */}
@@ -46,7 +46,7 @@ const PageHeader = ({ badge, title, highlight, description, backgroundImage = '/
         </div>
 
         {/* Title */}
-        <h1 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl">
+        <h1 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight max-w-4xl">
           {title}
           {highlight && (
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 mt-2">{highlight}</span>
@@ -54,7 +54,7 @@ const PageHeader = ({ badge, title, highlight, description, backgroundImage = '/
         </h1>
 
         {/* Description */}
-        <p className="text-lg text-white/60 max-w-2xl leading-relaxed">
+        <p className="text-lg xl:text-xl text-white/60 max-w-2xl leading-relaxed">
           {description}
         </p>
 

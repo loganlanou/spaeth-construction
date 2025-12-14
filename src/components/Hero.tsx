@@ -104,26 +104,26 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-16">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold hover:bg-green-500 transition-all duration-300 group shadow-lg shadow-green-600/25 rounded"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 lg:px-10 lg:py-5 xl:px-12 xl:py-6 bg-green-600 text-white text-base lg:text-lg font-semibold hover:bg-green-500 transition-all duration-300 group shadow-lg shadow-green-600/25 rounded"
             >
               Get Free Estimate
-              <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-medium hover:bg-white hover:text-gray-900 transition-all duration-300 rounded"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 lg:px-10 lg:py-5 xl:px-12 xl:py-6 bg-white/10 backdrop-blur-sm border border-white/30 text-white text-base lg:text-lg font-medium hover:bg-white hover:text-gray-900 transition-all duration-300 rounded"
             >
               View Our Work
             </Link>
           </div>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-10 pt-8 border-t border-white/20">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-10 xl:gap-14 pt-8 border-t border-white/20">
             {[
               { value: '20+', label: 'Years Experience' },
               { value: '500+', label: 'Projects Completed' },
@@ -131,10 +131,10 @@ const Hero = () => {
               { value: '100%', label: 'Client Satisfaction' },
             ].map((stat, index) => (
               <div key={index} className="group">
-                <div className="font-[family-name:var(--font-poppins)] text-2xl lg:text-3xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
+                <div className="font-[family-name:var(--font-poppins)] text-2xl lg:text-3xl xl:text-4xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
                   {stat.value}
                 </div>
-                <div className="text-xs lg:text-sm text-white/60 uppercase tracking-wider mt-1">
+                <div className="text-xs lg:text-sm xl:text-base text-white/60 uppercase tracking-wider mt-1">
                   {stat.label}
                 </div>
               </div>

@@ -102,7 +102,7 @@ export default function ProjectsPage() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <div className="bg-black">
+    <div className="bg-[#0a0a0a]">
       <PageHeader
         badge="Our Portfolio"
         title="Featured"
@@ -117,12 +117,12 @@ export default function ProjectsPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 lg:gap-3 mb-12 xl:mb-16">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
+                className={`px-5 py-2.5 lg:px-6 lg:py-3 xl:px-8 xl:py-4 text-sm lg:text-base font-medium transition-all duration-300 rounded ${
                   activeCategory === category
                     ? 'bg-green-600 text-white shadow-lg shadow-green-600/30'
                     : 'bg-white/5 text-white/60 border border-green-600/20 hover:border-green-500/50 hover:text-white'
@@ -134,14 +134,14 @@ export default function ProjectsPage() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden bg-[#111111] border border-green-600/10 hover:border-green-500/40 transition-all duration-500"
+                className="group relative overflow-hidden bg-[#111111] border border-green-600/20 hover:border-green-500/40 transition-all duration-500"
               >
                 {/* Project Image */}
-                <div className="relative h-48 lg:h-56 overflow-hidden">
+                <div className="relative h-48 lg:h-56 xl:h-64 overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -159,11 +159,11 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="font-[family-name:var(--font-poppins)] text-lg font-semibold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
+                <div className="p-6 xl:p-8">
+                  <h3 className="font-[family-name:var(--font-poppins)] text-lg xl:text-xl font-semibold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-white/60 text-sm mb-4 leading-relaxed">
+                  <p className="text-white/60 text-sm xl:text-base mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -189,22 +189,22 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 lg:py-24 bg-green-600 overflow-hidden">
+      <section className="relative py-16 lg:py-24 xl:py-32 bg-green-600 overflow-hidden">
         <div className="absolute inset-0 construction-stripes opacity-20" />
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-4xl font-bold text-white mb-6">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
             Want to See Your Project Featured Here?
           </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
+          <p className="text-white/90 mb-8 lg:mb-10 max-w-2xl mx-auto text-lg xl:text-xl">
             Contact us today to discuss your construction needs and get a free estimate.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-bold hover:bg-green-50 transition-colors shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 lg:px-10 lg:py-5 xl:px-12 xl:py-6 bg-white text-green-700 text-base lg:text-lg font-bold hover:bg-green-50 transition-colors shadow-xl rounded group"
           >
-            Start Your Project
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            Get Free Estimate
+            <svg className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

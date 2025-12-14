@@ -74,7 +74,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative py-24 lg:py-32 bg-[#0a0a0a] overflow-hidden"
+      className="relative py-24 lg:py-32 xl:py-40 bg-[#0a0a0a] overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 construction-grid opacity-20" />
@@ -98,11 +98,11 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-12 xl:gap-16 items-start">
           {/* Contact info */}
           <div className="lg:col-span-2">
-            <div className="bg-[#111111] border border-green-600/20 p-8 lg:p-10">
-              <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
+            <div className="bg-[#111111] border border-green-600/20 p-8 lg:p-10 xl:p-12">
+              <h3 className="text-2xl xl:text-3xl font-bold text-white mb-8">Contact Information</h3>
 
               <div className="space-y-6 mb-10">
                 {contactInfo.map((info, index) => (
@@ -114,7 +114,7 @@ const Contact = () => {
                         rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="flex items-start gap-4 group"
                       >
-                        <div className="w-12 h-12 border border-green-500/30 flex items-center justify-center text-green-400 group-hover:bg-green-600 group-hover:border-green-600 group-hover:text-white transition-all duration-300 flex-shrink-0">
+                        <div className="w-12 h-12 xl:w-14 xl:h-14 border border-green-500/30 flex items-center justify-center text-green-400 group-hover:bg-green-600 group-hover:border-green-600 group-hover:text-white transition-all duration-300 flex-shrink-0">
                           {info.icon}
                         </div>
                         <div>
@@ -126,7 +126,7 @@ const Contact = () => {
                       </a>
                     ) : (
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 border border-green-500/30 flex items-center justify-center text-green-400 flex-shrink-0">
+                        <div className="w-12 h-12 xl:w-14 xl:h-14 border border-green-500/30 flex items-center justify-center text-green-400 flex-shrink-0">
                           {info.icon}
                         </div>
                         <div>
@@ -170,7 +170,7 @@ const Contact = () => {
 
           {/* Contact form */}
           <div className="lg:col-span-3">
-            <div className="bg-[#111111] border border-green-600/20 p-8 lg:p-10">
+            <div className="bg-[#111111] border border-green-600/20 p-8 lg:p-10 xl:p-12">
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 bg-green-500/20 flex items-center justify-center mx-auto mb-6">
@@ -276,11 +276,11 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto px-8 py-4 bg-green-600 text-white font-semibold shadow-lg shadow-green-600/20 hover:bg-green-500 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-4 lg:px-10 lg:py-5 xl:px-12 xl:py-6 bg-green-600 text-white text-base lg:text-lg font-semibold shadow-lg shadow-green-600/20 hover:bg-green-500 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 rounded"
                   >
                     {isSubmitting ? (
                       <>
-                        <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
+                        <svg className="animate-spin w-5 h-5 lg:w-6 lg:h-6" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                         </svg>
@@ -288,8 +288,8 @@ const Contact = () => {
                       </>
                     ) : (
                       <>
-                        Request Free Quote
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        Get Free Estimate
+                        <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                       </>

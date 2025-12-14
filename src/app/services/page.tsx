@@ -79,7 +79,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="bg-black">
+    <div className="bg-[#0a0a0a]">
       <PageHeader
         badge="Our Services"
         title="Comprehensive Construction"
@@ -89,15 +89,15 @@ export default function ServicesPage() {
       />
 
       {/* Services Grid */}
-      <section className="relative py-16 lg:py-24 overflow-hidden">
+      <section className="relative py-16 lg:py-24 xl:py-32 overflow-hidden">
         <div className="absolute inset-0 construction-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden bg-[#111111] border border-green-600/10 hover:border-green-500/40 transition-all duration-500"
+                className="group relative overflow-hidden bg-[#111111] border border-green-600/20 hover:border-green-500/40 transition-all duration-500"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500">
@@ -111,16 +111,16 @@ export default function ServicesPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/95 to-[#0a0a0a]/85" />
 
                 {/* Content */}
-                <div className="relative p-6 lg:p-8">
-                  <div className="w-14 h-14 flex items-center justify-center border border-green-500/30 text-green-400 mb-6 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-300">
+                <div className="relative p-6 lg:p-8 xl:p-10">
+                  <div className="w-14 h-14 xl:w-18 xl:h-18 flex items-center justify-center border border-green-500/30 text-green-400 mb-6 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-300">
                     {service.icon}
                   </div>
 
-                  <h3 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
+                  <h3 className="font-[family-name:var(--font-poppins)] text-xl xl:text-2xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
                     {service.title}
                   </h3>
 
-                  <p className="text-white/60 text-sm leading-relaxed mb-6">
+                  <p className="text-white/60 text-sm xl:text-base leading-relaxed mb-6">
                     {service.description}
                   </p>
 
@@ -145,22 +145,22 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 lg:py-24 bg-green-600 overflow-hidden">
+      <section className="relative py-16 lg:py-24 xl:py-32 bg-green-600 overflow-hidden">
         <div className="absolute inset-0 construction-stripes opacity-20" />
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-4xl font-bold text-white mb-6">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
+          <p className="text-white/90 mb-8 lg:mb-10 max-w-2xl mx-auto text-lg xl:text-xl">
             Contact us today for a free consultation and estimate. We&apos;ll work with you to bring your vision to life.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-bold hover:bg-green-50 transition-colors shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 lg:px-10 lg:py-5 xl:px-12 xl:py-6 bg-white text-green-700 text-base lg:text-lg font-bold hover:bg-green-50 transition-colors shadow-xl rounded group"
           >
-            Get a Free Quote
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            Get Free Estimate
+            <svg className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

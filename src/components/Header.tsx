@@ -120,7 +120,7 @@ const Header = () => {
               ))}
               <Link
                 href="/contact"
-                className="ml-4 px-6 py-2.5 bg-green-600 text-white text-sm font-semibold hover:bg-green-500 transition-all duration-300 shadow-md shadow-green-600/20 rounded"
+                className="ml-4 px-6 py-2.5 xl:px-8 xl:py-3 bg-green-600 text-white text-sm xl:text-base font-semibold hover:bg-green-500 transition-all duration-300 shadow-md shadow-green-600/20 rounded"
               >
                 Free Estimate
               </Link>
