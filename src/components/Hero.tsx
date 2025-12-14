@@ -15,7 +15,7 @@ const Hero = () => {
       subtitle: 'Premier construction services for residential, commercial, and agricultural projects throughout the Chippewa Valley.',
     },
     {
-      image: '/images/gallery/construction-site-2.jpg',
+      image: '/images/gallery/excavator-work.jpg',
       title: 'Quality',
       highlight: 'Craftsmanship',
       subtitle: 'Over 20 years of experience delivering excellence in every project we undertake.',
@@ -26,12 +26,30 @@ const Hero = () => {
       highlight: 'Our Expertise',
       subtitle: 'From concept to completion, we bring your construction dreams to life.',
     },
+    {
+      image: '/images/gallery/concrete-pour-1.jpg',
+      title: 'Expert',
+      highlight: 'Concrete Work',
+      subtitle: 'Professional concrete services for foundations, driveways, patios and decorative flatwork.',
+    },
+    {
+      image: '/images/gallery/barn-construction.jpg',
+      title: 'Agricultural',
+      highlight: 'Construction',
+      subtitle: 'Specialized barn and farm building construction built for Wisconsin conditions.',
+    },
+    {
+      image: '/images/gallery/commercial-building.jpg',
+      title: 'Commercial',
+      highlight: 'Excellence',
+      subtitle: 'Full-scale commercial construction for businesses that demand quality.',
+    },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
