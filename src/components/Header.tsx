@@ -38,11 +38,11 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-black/20'
-          : 'bg-transparent'
+          ? 'bg-white shadow-lg'
+          : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
-      {/* Top Contact Bar - Hidden on mobile, visible when not scrolled */}
+      {/* Top Contact Bar */}
       <div className={`hidden lg:block transition-all duration-300 overflow-hidden ${
         isScrolled ? 'max-h-0 opacity-0' : 'max-h-12 opacity-100'
       }`}>
@@ -73,35 +73,28 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <div className={`transition-all duration-300 ${isScrolled ? '' : 'bg-black/30 backdrop-blur-sm'}`}>
+      <div className="border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              {/* Logo Mark - Clover/Construction Inspired */}
               <div className="relative w-10 h-10 lg:w-12 lg:h-12">
-                <svg
-                  viewBox="0 0 48 48"
-                  className="w-full h-full"
-                  fill="none"
-                >
-                  {/* Four-leaf clover shape with construction elements */}
+                <svg viewBox="0 0 48 48" className="w-full h-full" fill="none">
                   <circle cx="18" cy="18" r="8" fill="#22c55e" />
                   <circle cx="30" cy="18" r="8" fill="#16a34a" />
                   <circle cx="18" cy="30" r="8" fill="#16a34a" />
                   <circle cx="30" cy="30" r="8" fill="#22c55e" />
-                  <rect x="20" y="14" width="8" height="20" fill="#0a0a0a" />
-                  <rect x="14" y="20" width="20" height="8" fill="#0a0a0a" />
-                  {/* Center accent */}
+                  <rect x="20" y="14" width="8" height="20" fill="#ffffff" />
+                  <rect x="14" y="20" width="20" height="8" fill="#ffffff" />
                   <circle cx="24" cy="24" r="4" fill="#22c55e" />
                 </svg>
               </div>
 
               <div className="flex flex-col">
-                <span className="font-[family-name:var(--font-poppins)] font-bold text-lg lg:text-xl text-white tracking-tight group-hover:text-green-400 transition-colors">
+                <span className="font-[family-name:var(--font-poppins)] font-bold text-lg lg:text-xl text-gray-900 tracking-tight group-hover:text-green-600 transition-colors">
                   CLOVERBELT
                 </span>
-                <span className="text-[10px] lg:text-xs text-green-500 tracking-[0.2em] uppercase font-medium">
+                <span className="text-[10px] lg:text-xs text-green-600 tracking-[0.2em] uppercase font-medium">
                   Construction LLC
                 </span>
               </div>
@@ -115,8 +108,8 @@ const Header = () => {
                   href={link.href}
                   className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${
                     isActive(link.href)
-                      ? 'text-green-400'
-                      : 'text-white/80 hover:text-white'
+                      ? 'text-green-600'
+                      : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
                   {link.label}
@@ -127,7 +120,7 @@ const Header = () => {
               ))}
               <Link
                 href="/contact"
-                className="ml-4 px-6 py-2.5 bg-green-600 text-white text-sm font-semibold hover:bg-green-500 transition-all duration-300 shadow-md shadow-green-600/20"
+                className="ml-4 px-6 py-2.5 bg-green-600 text-white text-sm font-semibold hover:bg-green-500 transition-all duration-300 shadow-md shadow-green-600/20 rounded"
               >
                 Free Estimate
               </Link>
@@ -137,7 +130,7 @@ const Header = () => {
             <div className="lg:hidden flex items-center gap-3">
               <a
                 href="tel:+17152894098"
-                className="p-2 text-green-400 hover:text-green-300 transition-colors"
+                className="p-2 text-green-600 hover:text-green-500 transition-colors"
                 aria-label="Call us"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -146,25 +139,13 @@ const Header = () => {
               </a>
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 text-white"
+                className="p-2 text-gray-700"
                 aria-label="Toggle menu"
               >
                 <div className="w-6 h-5 relative flex flex-col justify-between">
-                  <span
-                    className={`w-full h-0.5 bg-current transform transition-all duration-300 origin-center ${
-                      isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
-                    }`}
-                  />
-                  <span
-                    className={`w-full h-0.5 bg-current transition-all duration-300 ${
-                      isMobileMenuOpen ? 'opacity-0' : ''
-                    }`}
-                  />
-                  <span
-                    className={`w-full h-0.5 bg-current transform transition-all duration-300 origin-center ${
-                      isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
-                    }`}
-                  />
+                  <span className={`w-full h-0.5 bg-current transform transition-all duration-300 origin-center ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                  <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+                  <span className={`w-full h-0.5 bg-current transform transition-all duration-300 origin-center ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
                 </div>
               </button>
             </div>
@@ -173,33 +154,29 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <nav className="bg-black/95 backdrop-blur-md border-t border-green-600/20 px-4 py-4">
+      <div className={`lg:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <nav className="bg-white border-t border-gray-100 px-4 py-4 shadow-lg">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`block px-4 py-3 text-sm font-medium border-l-2 transition-all duration-200 ${
                 isActive(link.href)
-                  ? 'border-green-500 text-green-400 bg-green-500/10'
-                  : 'border-transparent text-white/70 hover:text-white hover:border-white/20'
+                  ? 'border-green-500 text-green-600 bg-green-50'
+                  : 'border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <div className="mt-4 mx-4 pt-4 border-t border-white/10">
+          <div className="mt-4 mx-4 pt-4 border-t border-gray-100">
             <Link
               href="/contact"
-              className="block px-4 py-3 bg-green-600 text-white text-sm font-semibold text-center hover:bg-green-500 transition-all"
+              className="block px-4 py-3 bg-green-600 text-white text-sm font-semibold text-center hover:bg-green-500 transition-all rounded"
             >
               Get Free Estimate
             </Link>
-            <div className="mt-4 flex items-center justify-center gap-2 text-white/50 text-xs">
+            <div className="mt-4 flex items-center justify-center gap-2 text-gray-500 text-xs">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
               </svg>
@@ -208,13 +185,6 @@ const Header = () => {
           </div>
         </nav>
       </div>
-
-      {/* Bottom accent line */}
-      <div
-        className={`h-[2px] bg-gradient-to-r from-transparent via-green-500/50 to-transparent transition-opacity duration-300 ${
-          isScrolled ? 'opacity-100' : 'opacity-0'
-        }`}
-      />
     </header>
   );
 };

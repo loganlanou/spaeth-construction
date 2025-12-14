@@ -88,7 +88,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#16a34a" />
       </head>
       <body
-        className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable} font-sans antialiased bg-black text-white`}
+        className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable} font-sans antialiased bg-white text-gray-900`}
       >
         <Header />
         <main>{children}</main>

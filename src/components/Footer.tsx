@@ -22,12 +22,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-black overflow-hidden">
+    <footer className="relative bg-gray-900 overflow-hidden">
       {/* Top Border - Green Gradient */}
       <div className="h-1 bg-gradient-to-r from-green-700 via-green-500 to-green-700" />
-
-      {/* Grid Background */}
-      <div className="absolute inset-0 construction-grid opacity-20" />
 
       {/* Main Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-8">
@@ -35,15 +32,14 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
-              {/* Logo */}
               <div className="w-10 h-10">
                 <svg viewBox="0 0 48 48" className="w-full h-full" fill="none">
                   <circle cx="18" cy="18" r="8" fill="#22c55e" />
                   <circle cx="30" cy="18" r="8" fill="#16a34a" />
                   <circle cx="18" cy="30" r="8" fill="#16a34a" />
                   <circle cx="30" cy="30" r="8" fill="#22c55e" />
-                  <rect x="20" y="14" width="8" height="20" fill="#0a0a0a" />
-                  <rect x="14" y="20" width="20" height="8" fill="#0a0a0a" />
+                  <rect x="20" y="14" width="8" height="20" fill="#111827" />
+                  <rect x="14" y="20" width="20" height="8" fill="#111827" />
                   <circle cx="24" cy="24" r="4" fill="#22c55e" />
                 </svg>
               </div>
@@ -56,7 +52,7 @@ const Footer = () => {
                 </span>
               </div>
             </Link>
-            <p className="text-white/60 text-sm leading-relaxed mb-6">
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Building Wisconsin&apos;s future since 2001. Licensed, bonded, and insured construction services for residential, commercial, and agricultural projects.
             </p>
             {/* Social Links */}
@@ -65,7 +61,7 @@ const Footer = () => {
                 href="https://www.facebook.com/people/Cloverbelt-Construction/100063839118887/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-green-600/30 text-white/60 hover:border-green-500 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center border border-gray-700 text-gray-400 hover:border-green-500 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 rounded"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -76,7 +72,7 @@ const Footer = () => {
                 href="https://x.com/cloverbeltconsn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-green-600/30 text-white/60 hover:border-green-500 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center border border-gray-700 text-gray-400 hover:border-green-500 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 rounded"
                 aria-label="X (Twitter)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -97,7 +93,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href="/services"
-                    className="text-white/60 text-sm hover:text-green-400 transition-colors duration-300"
+                    className="text-gray-400 text-sm hover:text-green-400 transition-colors duration-300"
                   >
                     {service}
                   </Link>
@@ -117,7 +113,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-white/60 text-sm hover:text-green-400 transition-colors duration-300"
+                    className="text-gray-400 text-sm hover:text-green-400 transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -136,9 +132,9 @@ const Footer = () => {
               <li>
                 <a
                   href="tel:+17152894098"
-                  className="flex items-center gap-3 text-white/60 text-sm hover:text-green-400 transition-colors duration-300 group"
+                  className="flex items-center gap-3 text-gray-400 text-sm hover:text-green-400 transition-colors duration-300 group"
                 >
-                  <span className="w-9 h-9 flex items-center justify-center border border-green-600/30 group-hover:border-green-500 group-hover:bg-green-500/10 transition-all">
+                  <span className="w-9 h-9 flex items-center justify-center border border-gray-700 group-hover:border-green-500 group-hover:bg-green-500/10 transition-all rounded">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                     </svg>
@@ -151,9 +147,9 @@ const Footer = () => {
                   href="https://maps.google.com/?q=2515+250th+St+Cadott+WI+54727"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-white/60 text-sm hover:text-green-400 transition-colors duration-300 group"
+                  className="flex items-start gap-3 text-gray-400 text-sm hover:text-green-400 transition-colors duration-300 group"
                 >
-                  <span className="w-9 h-9 flex items-center justify-center border border-green-600/30 group-hover:border-green-500 group-hover:bg-green-500/10 transition-all flex-shrink-0">
+                  <span className="w-9 h-9 flex items-center justify-center border border-gray-700 group-hover:border-green-500 group-hover:bg-green-500/10 transition-all flex-shrink-0 rounded">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
@@ -166,8 +162,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <div className="flex items-center gap-3 text-white/60 text-sm">
-                  <span className="w-9 h-9 flex items-center justify-center border border-green-600/30 flex-shrink-0">
+                <div className="flex items-center gap-3 text-gray-400 text-sm">
+                  <span className="w-9 h-9 flex items-center justify-center border border-gray-700 flex-shrink-0 rounded">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -180,15 +176,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-green-600/20">
+        <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/40 text-sm">
+            <p className="text-gray-500 text-sm">
               &copy; {currentYear} Cloverbelt Construction LLC. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
-              <span className="text-white/40 text-xs uppercase tracking-wider">A+ BBB Rated</span>
+              <span className="text-gray-500 text-xs uppercase tracking-wider">A+ BBB Rated</span>
               <span className="text-green-500">|</span>
-              <span className="text-white/40 text-xs uppercase tracking-wider">Licensed & Insured</span>
+              <span className="text-gray-500 text-xs uppercase tracking-wider">Licensed & Insured</span>
             </div>
           </div>
         </div>
