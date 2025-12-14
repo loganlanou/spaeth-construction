@@ -72,7 +72,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-[#1a1714]">
+    <div className="bg-black">
       <PageHeader
         badge="Get in Touch"
         title="Let's Build"
@@ -83,15 +83,15 @@ export default function ContactPage() {
 
       {/* Contact Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 warm-grid opacity-30" />
+        <div className="absolute inset-0 construction-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
             {/* Contact Info */}
             <div className="lg:col-span-2 order-2 lg:order-1">
-              <div className="p-6 lg:p-8 bg-[#222222] border border-amber-600/20">
+              <div className="p-6 lg:p-8 bg-[#111111] border border-green-600/20">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
+                  <div className="w-8 h-[3px] bg-gradient-to-r from-green-600 to-green-500" />
                   <h2 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white">
                     Contact Information
                   </h2>
@@ -107,19 +107,19 @@ export default function ContactPage() {
                           rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                           className="flex items-start gap-4 group"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center border border-amber-500/30 text-amber-400 group-hover:bg-amber-500 group-hover:border-amber-500 group-hover:text-white transition-all duration-300 flex-shrink-0">
+                          <div className="w-10 h-10 flex items-center justify-center border border-green-500/30 text-green-400 group-hover:bg-green-600 group-hover:border-green-600 group-hover:text-white transition-all duration-300 flex-shrink-0">
                             {info.icon}
                           </div>
                           <div className="min-w-0">
                             <p className="text-white/50 text-xs uppercase tracking-wider mb-1">{info.label}</p>
-                            <p className="text-white font-medium group-hover:text-amber-400 transition-colors duration-300 break-words">
+                            <p className="text-white font-medium group-hover:text-green-400 transition-colors duration-300 break-words">
                               {info.value}
                             </p>
                           </div>
                         </a>
                       ) : (
                         <div className="flex items-start gap-4">
-                          <div className="w-10 h-10 flex items-center justify-center border border-amber-500/30 text-amber-400 flex-shrink-0">
+                          <div className="w-10 h-10 flex items-center justify-center border border-green-500/30 text-green-400 flex-shrink-0">
                             {info.icon}
                           </div>
                           <div className="min-w-0">
@@ -133,14 +133,14 @@ export default function ContactPage() {
                 </div>
 
                 {/* Social Links */}
-                <div className="pt-6 border-t border-amber-600/20">
+                <div className="pt-6 border-t border-green-600/20">
                   <p className="text-white/50 text-xs uppercase tracking-wider mb-4">Follow Us</p>
                   <div className="flex gap-3">
                     <a
                       href="https://www.facebook.com/people/Cloverbelt-Construction/100063839118887/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 flex items-center justify-center border border-amber-600/30 text-white/60 hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300"
+                      className="w-10 h-10 flex items-center justify-center border border-green-600/30 text-white/60 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all duration-300"
                       aria-label="Facebook"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -151,7 +151,7 @@ export default function ContactPage() {
                       href="https://x.com/cloverbeltconsn"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 flex items-center justify-center border border-amber-600/30 text-white/60 hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300"
+                      className="w-10 h-10 flex items-center justify-center border border-green-600/30 text-white/60 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all duration-300"
                       aria-label="X (Twitter)"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -162,10 +162,10 @@ export default function ContactPage() {
                 </div>
 
                 {/* Credentials */}
-                <div className="mt-8 pt-6 border-t border-amber-600/20">
+                <div className="mt-8 pt-6 border-t border-green-600/20">
                   <div className="flex items-center gap-4">
                     <span className="text-white/40 text-xs uppercase tracking-wider">A+ BBB Rated</span>
-                    <span className="text-amber-500">|</span>
+                    <span className="text-green-500">|</span>
                     <span className="text-white/40 text-xs uppercase tracking-wider">Licensed & Insured</span>
                   </div>
                 </div>
@@ -174,11 +174,11 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-3 order-1 lg:order-2">
-              <div className="p-6 lg:p-8 bg-[#222222] border border-amber-600/20">
+              <div className="p-6 lg:p-8 bg-[#111111] border border-green-600/20">
                 {isSubmitted ? (
                   <div className="text-center py-12 lg:py-16">
-                    <div className="w-16 h-16 flex items-center justify-center bg-amber-500/20 mx-auto mb-6">
-                      <svg className="w-8 h-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <div className="w-16 h-16 flex items-center justify-center bg-green-500/20 mx-auto mb-6">
+                      <svg className="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
                     <p className="text-white/60 mb-8">We&apos;ll get back to you within 24 hours.</p>
                     <button
                       onClick={() => setIsSubmitted(false)}
-                      className="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-300"
+                      className="text-green-400 font-medium hover:text-green-300 transition-colors duration-300"
                     >
                       Send another message
                     </button>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                 ) : (
                   <>
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-8 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
+                      <div className="w-8 h-[3px] bg-gradient-to-r from-green-600 to-green-500" />
                       <h2 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white">
                         Send Us a Message
                       </h2>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                             required
                             value={formState.name}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-[#1a1714] border border-amber-600/20 text-white placeholder-white/40 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300 outline-none"
+                            className="w-full px-4 py-3 bg-[#0a0a0a] border border-green-600/20 text-white placeholder-white/40 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none"
                             placeholder="John Smith"
                           />
                         </div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
                             required
                             value={formState.email}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-[#1a1714] border border-amber-600/20 text-white placeholder-white/40 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300 outline-none"
+                            className="w-full px-4 py-3 bg-[#0a0a0a] border border-green-600/20 text-white placeholder-white/40 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none"
                             placeholder="john@example.com"
                           />
                         </div>
@@ -244,7 +244,7 @@ export default function ContactPage() {
                             name="phone"
                             value={formState.phone}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-[#1a1714] border border-amber-600/20 text-white placeholder-white/40 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300 outline-none"
+                            className="w-full px-4 py-3 bg-[#0a0a0a] border border-green-600/20 text-white placeholder-white/40 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none"
                             placeholder="(715) 555-0123"
                           />
                         </div>
@@ -258,11 +258,11 @@ export default function ContactPage() {
                             required
                             value={formState.service}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-[#1a1714] border border-amber-600/20 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300 outline-none appearance-none cursor-pointer"
+                            className="w-full px-4 py-3 bg-[#0a0a0a] border border-green-600/20 text-white focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none appearance-none cursor-pointer"
                           >
-                            <option value="" className="bg-[#1a1714]">Select a service</option>
+                            <option value="" className="bg-[#0a0a0a]">Select a service</option>
                             {services.map((service) => (
-                              <option key={service} value={service} className="bg-[#1a1714]">{service}</option>
+                              <option key={service} value={service} className="bg-[#0a0a0a]">{service}</option>
                             ))}
                           </select>
                         </div>
@@ -279,7 +279,7 @@ export default function ContactPage() {
                           rows={5}
                           value={formState.message}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-[#1a1714] border border-amber-600/20 text-white placeholder-white/40 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300 outline-none resize-none"
+                          className="w-full px-4 py-3 bg-[#0a0a0a] border border-green-600/20 text-white placeholder-white/40 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 outline-none resize-none"
                           placeholder="Tell us about your project, timeline, and any specific requirements..."
                         />
                       </div>
@@ -287,7 +287,7 @@ export default function ContactPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-600 to-amber-500 text-white font-semibold shadow-lg shadow-amber-600/20 hover:from-amber-500 hover:to-amber-400 disabled:opacity-70 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                        className="w-full sm:w-auto px-8 py-4 bg-green-600 text-white font-semibold shadow-lg shadow-green-600/20 hover:bg-green-500 disabled:opacity-70 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
                       >
                         {isSubmitting ? (
                           <>

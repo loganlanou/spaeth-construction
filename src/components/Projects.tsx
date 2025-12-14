@@ -60,24 +60,24 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative py-24 lg:py-32 bg-[#141210] overflow-hidden"
+      className="relative py-24 lg:py-32 bg-[#050505] overflow-hidden"
     >
       {/* Background elements */}
-      <div className="absolute inset-0 blueprint-grid opacity-30" />
+      <div className="absolute inset-0 blueprint-grid opacity-20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
-            <span className="text-amber-500 text-sm font-semibold uppercase tracking-wider">
+            <div className="w-12 h-[3px] bg-gradient-to-r from-green-600 to-green-500" />
+            <span className="text-green-500 text-sm font-semibold uppercase tracking-wider">
               Our Portfolio
             </span>
-            <div className="w-12 h-[3px] bg-gradient-to-l from-amber-600 to-amber-500" />
+            <div className="w-12 h-[3px] bg-gradient-to-l from-green-600 to-green-500" />
           </div>
           <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Featured
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500"> Projects</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500"> Projects</span>
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
             A showcase of our craftsmanship across residential, commercial, and agricultural construction.
@@ -92,8 +92,8 @@ const Projects = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-5 py-2 text-sm font-medium transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-gradient-to-r from-amber-600 to-amber-500 text-white shadow-lg shadow-amber-600/30'
-                  : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-amber-600/20'
+                  ? 'bg-green-600 text-white shadow-lg shadow-green-600/30'
+                  : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-green-600/20'
               }`}
             >
               {category}
@@ -106,7 +106,7 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-[#1a1714] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-500"
+              className="group relative overflow-hidden bg-[#0a0a0a] border border-green-600/10 hover:border-green-500/40 transition-all duration-500"
             >
               {/* Project image */}
               <div className="relative h-56 overflow-hidden">
@@ -116,11 +116,11 @@ const Projects = () => {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1714] via-[#1a1714]/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent" />
 
                 {/* Category badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-amber-500/90 text-white text-xs font-semibold">
+                  <span className="px-3 py-1 bg-green-600/90 text-white text-xs font-semibold">
                     {project.category}
                   </span>
                 </div>
@@ -128,7 +128,7 @@ const Projects = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
+                <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
                   {project.title}
                 </h3>
                 <p className="text-white/60 text-sm mb-4 leading-relaxed">
@@ -140,7 +140,7 @@ const Projects = () => {
                   {project.stats.map((stat, statIndex) => (
                     <span
                       key={statIndex}
-                      className="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs border border-amber-500/20"
+                      className="px-3 py-1 bg-green-500/10 text-green-400 text-xs border border-green-500/20"
                     >
                       {stat}
                     </span>
@@ -149,7 +149,7 @@ const Projects = () => {
               </div>
 
               {/* Hover line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-600 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </div>
           ))}
         </div>
@@ -159,7 +159,7 @@ const Projects = () => {
           <p className="text-white/50 mb-4">Want to see your project featured here?</p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors duration-300 group"
+            className="inline-flex items-center gap-2 text-green-400 font-semibold hover:text-green-300 transition-colors duration-300 group"
           >
             Start Your Project
             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

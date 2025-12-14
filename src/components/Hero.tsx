@@ -12,7 +12,7 @@ const Hero = () => {
       image: '/images/construction-1.jpg',
       title: 'Building',
       highlight: "Wisconsin's Future",
-      subtitle: 'Premier construction services for residential, commercial, and agricultural projects.',
+      subtitle: 'Premier construction services for residential, commercial, and agricultural projects throughout the Chippewa Valley.',
     },
     {
       image: '/images/construction-2.jpg',
@@ -36,7 +36,7 @@ const Hero = () => {
   }, [slides.length]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#1a1714]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
@@ -55,37 +55,37 @@ const Hero = () => {
         </div>
       ))}
 
-      {/* Overlay Gradients */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1a1714] via-[#1a1714]/85 to-[#1a1714]/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#1a1714] via-transparent to-[#1a1714]/40" />
+      {/* Dark Overlay Gradients */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
 
-      {/* Warm Grid Pattern */}
-      <div className="absolute inset-0 warm-grid opacity-40" />
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 construction-grid opacity-30" />
 
       {/* Decorative Elements */}
-      <div className="absolute top-20 right-10 w-40 h-40 border border-amber-600/20 hidden lg:block" />
-      <div className="absolute top-32 right-22 w-40 h-40 border border-amber-600/10 hidden lg:block" />
-      <div className="absolute bottom-20 left-10 w-32 h-32 border border-white/5 hidden lg:block" />
+      <div className="absolute top-32 right-10 w-48 h-48 border border-green-500/10 hidden lg:block" />
+      <div className="absolute top-44 right-22 w-48 h-48 border border-green-500/5 hidden lg:block" />
+      <div className="absolute bottom-32 left-10 w-32 h-32 border border-white/5 hidden lg:block" />
 
-      {/* Construction Accent Lines */}
-      <div className="absolute left-0 top-1/4 w-1 h-32 bg-gradient-to-b from-amber-600 to-transparent hidden lg:block" />
-      <div className="absolute right-0 bottom-1/4 w-1 h-32 bg-gradient-to-t from-amber-600 to-transparent hidden lg:block" />
+      {/* Green Accent Lines */}
+      <div className="absolute left-0 top-1/4 w-1 h-40 bg-gradient-to-b from-green-500 to-transparent hidden lg:block" />
+      <div className="absolute right-0 bottom-1/4 w-1 h-40 bg-gradient-to-t from-green-500 to-transparent hidden lg:block" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 w-full">
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-3 mb-8">
-            <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
-            <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">
-              Since 2001 | Licensed & Insured
+            <div className="w-12 h-[3px] bg-gradient-to-r from-green-600 to-green-400" />
+            <span className="text-green-400 text-sm font-semibold tracking-wider uppercase">
+              Serving Wisconsin Since 2001
             </span>
           </div>
 
           {/* Main Heading - Animated per slide */}
           <h1 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1]">
             {slides[currentSlide].title}
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-emerald-400">
               {slides[currentSlide].highlight}
             </span>
           </h1>
@@ -99,7 +99,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-amber-500 text-white font-semibold hover:from-amber-500 hover:to-amber-400 transition-all duration-300 group shadow-lg shadow-amber-600/25"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold hover:bg-green-500 transition-all duration-300 group shadow-lg shadow-green-600/25"
             >
               Get Free Estimate
               <svg
@@ -114,7 +114,7 @@ const Hero = () => {
             </Link>
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium hover:border-amber-500 hover:text-amber-400 transition-all duration-300 backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium hover:border-green-500 hover:text-green-400 transition-all duration-300 backdrop-blur-sm"
             >
               View Our Work
             </Link>
@@ -129,7 +129,7 @@ const Hero = () => {
               { value: '100%', label: 'Client Satisfaction' },
             ].map((stat, index) => (
               <div key={index} className="group">
-                <div className="font-[family-name:var(--font-poppins)] text-2xl lg:text-3xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+                <div className="font-[family-name:var(--font-poppins)] text-2xl lg:text-3xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
                   {stat.value}
                 </div>
                 <div className="text-xs lg:text-sm text-white/50 uppercase tracking-wider mt-1">
@@ -149,7 +149,7 @@ const Hero = () => {
             onClick={() => setCurrentSlide(index)}
             className={`transition-all duration-300 ${
               index === currentSlide
-                ? 'w-8 h-2 bg-amber-500'
+                ? 'w-10 h-2 bg-green-500'
                 : 'w-2 h-2 bg-white/30 hover:bg-white/50'
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -157,12 +157,12 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Right Side Accent */}
+      {/* Right Side Decorative Accent */}
       <div className="absolute right-0 top-0 bottom-0 w-1/3 hidden lg:block pointer-events-none">
         <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4">
-          <div className="w-[1px] h-20 bg-gradient-to-b from-transparent to-amber-600/50" />
-          <div className="w-3 h-3 border-2 border-amber-500 rotate-45" />
-          <div className="w-[1px] h-20 bg-gradient-to-t from-transparent to-amber-600/50" />
+          <div className="w-[1px] h-20 bg-gradient-to-b from-transparent to-green-500/50" />
+          <div className="w-3 h-3 border-2 border-green-500 rotate-45" />
+          <div className="w-[1px] h-20 bg-gradient-to-t from-transparent to-green-500/50" />
         </div>
       </div>
 

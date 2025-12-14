@@ -79,7 +79,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="bg-[#1a1714]">
+    <div className="bg-black">
       <PageHeader
         badge="Our Services"
         title="Comprehensive Construction"
@@ -90,14 +90,14 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 warm-grid opacity-30" />
+        <div className="absolute inset-0 construction-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden bg-[#222222] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-500"
+                className="group relative overflow-hidden bg-[#111111] border border-green-600/10 hover:border-green-500/40 transition-all duration-500"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500">
@@ -108,15 +108,15 @@ export default function ServicesPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1714] via-[#1a1714]/95 to-[#1a1714]/85" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/95 to-[#0a0a0a]/85" />
 
                 {/* Content */}
                 <div className="relative p-6 lg:p-8">
-                  <div className="w-14 h-14 flex items-center justify-center border border-amber-500/30 text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500 transition-all duration-300">
+                  <div className="w-14 h-14 flex items-center justify-center border border-green-500/30 text-green-400 mb-6 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-300">
                     {service.icon}
                   </div>
 
-                  <h3 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors">
+                  <h3 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
                     {service.title}
                   </h3>
 
@@ -127,7 +127,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                        <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                         <span className="text-white/50">{feature}</span>
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-600 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </div>
             ))}
           </div>
@@ -145,7 +145,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 lg:py-24 bg-gradient-to-br from-amber-600 to-amber-700 overflow-hidden">
+      <section className="relative py-16 lg:py-24 bg-green-600 overflow-hidden">
         <div className="absolute inset-0 construction-stripes opacity-20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -157,7 +157,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-amber-700 font-bold hover:bg-amber-50 transition-colors shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-bold hover:bg-green-50 transition-colors shadow-xl"
           >
             Get a Free Quote
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

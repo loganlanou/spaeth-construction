@@ -81,7 +81,7 @@ export default function ProjectsPage() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <div className="bg-[#1a1714]">
+    <div className="bg-black">
       <PageHeader
         badge="Our Portfolio"
         title="Featured"
@@ -92,7 +92,7 @@ export default function ProjectsPage() {
 
       {/* Projects Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 warm-grid opacity-30" />
+        <div className="absolute inset-0 construction-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Filter */}
@@ -103,8 +103,8 @@ export default function ProjectsPage() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                   activeCategory === category
-                    ? 'bg-gradient-to-r from-amber-600 to-amber-500 text-white shadow-lg shadow-amber-600/30'
-                    : 'bg-white/5 text-white/60 border border-amber-600/20 hover:border-amber-500/50 hover:text-white'
+                    ? 'bg-green-600 text-white shadow-lg shadow-green-600/30'
+                    : 'bg-white/5 text-white/60 border border-green-600/20 hover:border-green-500/50 hover:text-white'
                 }`}
               >
                 {category}
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden bg-[#222222] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-500"
+                className="group relative overflow-hidden bg-[#111111] border border-green-600/10 hover:border-green-500/40 transition-all duration-500"
               >
                 {/* Project Image */}
                 <div className="relative h-48 lg:h-56 overflow-hidden">
@@ -127,11 +127,11 @@ export default function ProjectsPage() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1714] via-[#1a1714]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent" />
 
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-amber-500/90 text-white text-xs font-semibold uppercase tracking-wider">
+                    <span className="px-3 py-1 bg-green-600/90 text-white text-xs font-semibold uppercase tracking-wider">
                       {project.category}
                     </span>
                   </div>
@@ -139,7 +139,7 @@ export default function ProjectsPage() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="font-[family-name:var(--font-poppins)] text-lg font-semibold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
+                  <h3 className="font-[family-name:var(--font-poppins)] text-lg font-semibold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
                     {project.title}
                   </h3>
                   <p className="text-white/60 text-sm mb-4 leading-relaxed">
@@ -151,7 +151,7 @@ export default function ProjectsPage() {
                     {project.stats.map((stat, statIndex) => (
                       <span
                         key={statIndex}
-                        className="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs border border-amber-500/20"
+                        className="px-3 py-1 bg-green-500/10 text-green-400 text-xs border border-green-500/20"
                       >
                         {stat}
                       </span>
@@ -160,7 +160,7 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Hover line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-600 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </div>
             ))}
           </div>
@@ -168,7 +168,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 lg:py-24 bg-gradient-to-br from-amber-600 to-amber-700 overflow-hidden">
+      <section className="relative py-16 lg:py-24 bg-green-600 overflow-hidden">
         <div className="absolute inset-0 construction-stripes opacity-20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -180,7 +180,7 @@ export default function ProjectsPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-amber-700 font-bold hover:bg-amber-50 transition-colors shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-bold hover:bg-green-50 transition-colors shadow-xl"
           >
             Start Your Project
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

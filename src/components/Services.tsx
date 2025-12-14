@@ -75,24 +75,24 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative py-24 lg:py-32 bg-[#1a1714] overflow-hidden"
+      className="relative py-24 lg:py-32 bg-[#0a0a0a] overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 warm-grid opacity-40" />
+      <div className="absolute inset-0 construction-grid opacity-30" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
-            <span className="text-amber-500 text-sm font-semibold uppercase tracking-wider">
+            <div className="w-12 h-[3px] bg-gradient-to-r from-green-600 to-green-500" />
+            <span className="text-green-500 text-sm font-semibold uppercase tracking-wider">
               Our Services
             </span>
-            <div className="w-12 h-[3px] bg-gradient-to-l from-amber-600 to-amber-500" />
+            <div className="w-12 h-[3px] bg-gradient-to-l from-green-600 to-green-500" />
           </div>
           <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Comprehensive Construction
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">Solutions</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">Solutions</span>
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
             From concept to completion, we deliver excellence across residential, commercial, and agricultural projects throughout Wisconsin.
@@ -104,10 +104,10 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-[#222222] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-500"
+              className="group relative overflow-hidden bg-[#111111] border border-green-600/10 hover:border-green-500/40 transition-all duration-500"
             >
               {/* Background Image */}
-              <div className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500">
+              <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -115,17 +115,17 @@ const Services = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1714] via-[#1a1714]/95 to-[#1a1714]/85" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/95 to-[#0a0a0a]/85" />
 
               {/* Content */}
               <div className="relative p-8">
                 {/* Icon */}
-                <div className="w-16 h-16 flex items-center justify-center border border-amber-500/30 text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500 transition-all duration-300">
+                <div className="w-16 h-16 flex items-center justify-center border border-green-500/30 text-green-400 mb-6 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-300">
                   {service.icon}
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
+                <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-white/60 mb-6 leading-relaxed">
@@ -136,7 +136,7 @@ const Services = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-2 text-sm text-white/50">
-                      <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       {feature}
@@ -146,7 +146,7 @@ const Services = () => {
               </div>
 
               {/* Bottom accent line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-600 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </div>
           ))}
         </div>
@@ -155,7 +155,7 @@ const Services = () => {
         <div className="text-center mt-16">
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-amber-500 text-white font-semibold hover:from-amber-500 hover:to-amber-400 transition-all duration-300 shadow-lg shadow-amber-600/20"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold hover:bg-green-500 transition-all duration-300 shadow-lg shadow-green-600/20"
           >
             Discuss Your Project
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -58,7 +58,7 @@ const milestones = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-[#1a1714]">
+    <div className="bg-black">
       <PageHeader
         badge="About Us"
         title="Building Trust Since"
@@ -69,15 +69,15 @@ export default function AboutPage() {
 
       {/* Story Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 warm-grid opacity-30" />
+        <div className="absolute inset-0 construction-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Content */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
-                <span className="text-amber-500 text-sm font-semibold uppercase tracking-wider">
+                <div className="w-12 h-[3px] bg-gradient-to-r from-green-600 to-green-500" />
+                <span className="text-green-500 text-sm font-semibold uppercase tracking-wider">
                   Our Story
                 </span>
               </div>
@@ -99,8 +99,8 @@ export default function AboutPage() {
                   { value: 'A+', label: 'BBB Rating' },
                   { value: '100%', label: 'Satisfaction' },
                 ].map((stat, index) => (
-                  <div key={index} className="p-4 border border-amber-600/20 bg-[#222222]">
-                    <div className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-amber-400">
+                  <div key={index} className="p-4 border border-green-600/20 bg-[#111111]">
+                    <div className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-green-400">
                       {stat.value}
                     </div>
                     <div className="text-white/50 text-sm uppercase tracking-wider">
@@ -120,9 +120,9 @@ export default function AboutPage() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-green-600/30 to-transparent" />
               </div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 border-2 border-amber-500/30 hidden lg:block" />
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 border-2 border-green-500/30 hidden lg:block" />
               <div className="absolute -top-6 -right-6 w-32 h-32 border border-white/5 hidden lg:block" />
             </div>
           </div>
@@ -130,17 +130,17 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="relative py-16 lg:py-24 bg-[#141210]">
+      <section className="relative py-16 lg:py-24 bg-[#050505]">
         <div className="absolute inset-0 blueprint-grid opacity-20" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
-              <span className="text-amber-500 text-sm font-semibold uppercase tracking-wider">
+              <div className="w-12 h-[3px] bg-gradient-to-r from-green-600 to-green-500" />
+              <span className="text-green-500 text-sm font-semibold uppercase tracking-wider">
                 Our Values
               </span>
-              <div className="w-12 h-[3px] bg-gradient-to-l from-amber-600 to-amber-500" />
+              <div className="w-12 h-[3px] bg-gradient-to-l from-green-600 to-green-500" />
             </div>
             <h2 className="font-[family-name:var(--font-poppins)] text-3xl lg:text-4xl font-bold text-white">
               What Sets Us Apart
@@ -149,11 +149,11 @@ export default function AboutPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <div key={index} className="group p-6 bg-[#1a1714] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-300 text-center">
-                <div className="w-12 h-12 mx-auto flex items-center justify-center border border-amber-500/30 text-amber-400 mb-4 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500 transition-all duration-300">
+              <div key={index} className="group p-6 bg-[#0a0a0a] border border-green-600/10 hover:border-green-500/40 transition-all duration-300 text-center">
+                <div className="w-12 h-12 mx-auto flex items-center justify-center border border-green-500/30 text-green-400 mb-4 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-300">
                   {value.icon}
                 </div>
-                <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
                   {value.title}
                 </h3>
                 <p className="text-white/50 text-sm">{value.description}</p>
@@ -165,16 +165,16 @@ export default function AboutPage() {
 
       {/* Timeline Section */}
       <section className="relative py-16 lg:py-24">
-        <div className="absolute inset-0 warm-grid opacity-30" />
+        <div className="absolute inset-0 construction-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
-              <span className="text-amber-500 text-sm font-semibold uppercase tracking-wider">
+              <div className="w-12 h-[3px] bg-gradient-to-r from-green-600 to-green-500" />
+              <span className="text-green-500 text-sm font-semibold uppercase tracking-wider">
                 Our Journey
               </span>
-              <div className="w-12 h-[3px] bg-gradient-to-l from-amber-600 to-amber-500" />
+              <div className="w-12 h-[3px] bg-gradient-to-l from-green-600 to-green-500" />
             </div>
             <h2 className="font-[family-name:var(--font-poppins)] text-3xl lg:text-4xl font-bold text-white">
               Key Milestones
@@ -183,15 +183,15 @@ export default function AboutPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {milestones.map((milestone, index) => (
-              <div key={index} className="group p-6 bg-[#222222] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-300">
+              <div key={index} className="group p-6 bg-[#111111] border border-green-600/10 hover:border-green-500/40 transition-all duration-300">
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 flex items-center justify-center border border-amber-500/30 flex-shrink-0 group-hover:bg-amber-500 group-hover:border-amber-500 transition-all duration-300">
-                    <span className="font-[family-name:var(--font-poppins)] text-sm font-bold text-amber-400 group-hover:text-white transition-colors">
+                  <div className="w-14 h-14 flex items-center justify-center border border-green-500/30 flex-shrink-0 group-hover:bg-green-600 group-hover:border-green-600 transition-all duration-300">
+                    <span className="font-[family-name:var(--font-poppins)] text-sm font-bold text-green-400 group-hover:text-white transition-colors">
                       {milestone.year}
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-1 group-hover:text-amber-400 transition-colors">
+                    <h3 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-1 group-hover:text-green-400 transition-colors">
                       {milestone.event}
                     </h3>
                     <p className="text-white/50 text-sm">{milestone.description}</p>
@@ -204,7 +204,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 lg:py-24 bg-gradient-to-br from-amber-600 to-amber-700 overflow-hidden">
+      <section className="relative py-16 lg:py-24 bg-green-600 overflow-hidden">
         <div className="absolute inset-0 construction-stripes opacity-20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -216,7 +216,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-amber-700 font-bold hover:bg-amber-50 transition-colors shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-bold hover:bg-green-50 transition-colors shadow-xl"
           >
             Get in Touch
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

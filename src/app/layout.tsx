@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     description: "Licensed, bonded, and insured construction company serving Wisconsin since 2001. Specializing in residential, commercial, and agricultural construction.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/construction-1.jpg",
         width: 1200,
         height: 630,
         alt: "Cloverbelt Construction - Building Wisconsin's Future",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     site: "@cloverbeltconsn",
     title: "Cloverbelt Construction | Premier Construction Services",
     description: "Licensed, bonded, and insured construction company serving Wisconsin since 2001.",
-    images: ["/og-image.jpg"],
+    images: ["/images/construction-1.jpg"],
   },
   robots: {
     index: true,
@@ -72,9 +72,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "your-google-verification-code",
   },
 };
 
@@ -88,10 +85,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#10b981" />
+        <meta name="theme-color" content="#16a34a" />
       </head>
       <body
-        className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable} font-sans antialiased bg-[#0a0a0a] text-white`}
+        className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable} font-sans antialiased bg-black text-white`}
       >
         <Header />
         <main>{children}</main>

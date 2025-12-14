@@ -52,24 +52,24 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative py-24 lg:py-32 bg-[#1a1714] overflow-hidden"
+      className="relative py-24 lg:py-32 bg-[#0a0a0a] overflow-hidden"
     >
       {/* Background elements */}
-      <div className="absolute inset-0 warm-grid opacity-30" />
+      <div className="absolute inset-0 construction-grid opacity-20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
-              <span className="text-amber-500 text-sm font-semibold uppercase tracking-wider">
+              <div className="w-12 h-[3px] bg-gradient-to-r from-green-600 to-green-500" />
+              <span className="text-green-500 text-sm font-semibold uppercase tracking-wider">
                 About Us
               </span>
             </div>
             <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Building Trust Since
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">2001</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">2001</span>
             </h2>
             <p className="text-lg text-white/60 mb-6 leading-relaxed">
               Cloverbelt Construction LLC is a licensed, bonded, and insured construction company proudly serving Cadott, Wisconsin and the surrounding communities. Founded by Josh R. Spaeth, we&apos;ve built our reputation on quality craftsmanship, honest communication, and customer satisfaction.
@@ -83,9 +83,9 @@ const About = () => {
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-3 p-4 bg-[#222222] border border-amber-600/10 hover:border-amber-500/30 transition-colors duration-300"
+                  className="flex items-start gap-3 p-4 bg-[#111111] border border-green-600/10 hover:border-green-500/30 transition-colors duration-300"
                 >
-                  <div className="w-10 h-10 flex items-center justify-center border border-amber-500/30 text-amber-400 flex-shrink-0">
+                  <div className="w-10 h-10 flex items-center justify-center border border-green-500/30 text-green-400 flex-shrink-0">
                     {value.icon}
                   </div>
                   <div>
@@ -108,13 +108,13 @@ const About = () => {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-green-600/20 to-transparent" />
               </div>
 
               {/* Timeline Card */}
-              <div className="bg-[#222222] border border-amber-600/20 p-8">
+              <div className="bg-[#111111] border border-green-600/20 p-8">
                 <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <span className="w-10 h-10 bg-amber-500 flex items-center justify-center">
+                  <span className="w-10 h-10 bg-green-600 flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -127,15 +127,15 @@ const About = () => {
                     <div key={index} className="flex gap-4 group">
                       {/* Year bubble */}
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-amber-500/10 border border-amber-500/30 flex items-center justify-center group-hover:bg-amber-500 group-hover:border-amber-500 transition-all duration-300">
-                          <span className="text-sm font-bold text-amber-400 group-hover:text-white transition-colors duration-300">
+                        <div className="w-16 h-16 bg-green-500/10 border border-green-500/30 flex items-center justify-center group-hover:bg-green-600 group-hover:border-green-600 transition-all duration-300">
+                          <span className="text-sm font-bold text-green-400 group-hover:text-white transition-colors duration-300">
                             {milestone.year}
                           </span>
                         </div>
                       </div>
                       {/* Content */}
                       <div className="flex-1 pt-1">
-                        <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-amber-400 transition-colors duration-300">
+                        <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-green-400 transition-colors duration-300">
                           {milestone.event}
                         </h4>
                         <p className="text-white/50 text-sm">{milestone.description}</p>
@@ -145,7 +145,7 @@ const About = () => {
                 </div>
 
                 {/* BBB Badge */}
-                <div className="mt-8 pt-8 border-t border-amber-600/20">
+                <div className="mt-8 pt-8 border-t border-green-600/20">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 bg-white flex items-center justify-center">
                       <span className="text-2xl font-black text-blue-800">BBB</span>
@@ -155,7 +155,7 @@ const About = () => {
                         <span className="text-white font-semibold">A+ Rated</span>
                         <div className="flex gap-0.5">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <svg key={i} className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}

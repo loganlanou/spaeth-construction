@@ -22,12 +22,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#141210] overflow-hidden">
-      {/* Top Border - Warm Gradient */}
-      <div className="h-1 bg-gradient-to-r from-amber-700 via-amber-500 to-amber-700" />
+    <footer className="relative bg-black overflow-hidden">
+      {/* Top Border - Green Gradient */}
+      <div className="h-1 bg-gradient-to-r from-green-700 via-green-500 to-green-700" />
 
-      {/* Warm Grid Background */}
-      <div className="absolute inset-0 warm-grid opacity-30" />
+      {/* Grid Background */}
+      <div className="absolute inset-0 construction-grid opacity-20" />
 
       {/* Main Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-8">
@@ -37,23 +37,22 @@ const Footer = () => {
             <Link href="/" className="flex items-center gap-3 mb-6 group">
               {/* Logo */}
               <div className="w-10 h-10">
-                <svg viewBox="0 0 40 40" className="w-full h-full" fill="none">
-                  <rect x="6" y="14" width="14" height="20" fill="#d97706" />
-                  <rect x="20" y="8" width="14" height="26" fill="#b45309" />
-                  <rect x="9" y="18" width="4" height="5" fill="#141210" opacity="0.5" />
-                  <rect x="9" y="26" width="4" height="5" fill="#141210" opacity="0.5" />
-                  <rect x="24" y="12" width="4" height="5" fill="#141210" opacity="0.5" />
-                  <rect x="24" y="20" width="4" height="5" fill="#141210" opacity="0.5" />
-                  <rect x="24" y="28" width="4" height="5" fill="#141210" opacity="0.5" />
-                  <rect x="2" y="34" width="36" height="2" fill="#f59e0b" />
+                <svg viewBox="0 0 48 48" className="w-full h-full" fill="none">
+                  <circle cx="18" cy="18" r="8" fill="#22c55e" />
+                  <circle cx="30" cy="18" r="8" fill="#16a34a" />
+                  <circle cx="18" cy="30" r="8" fill="#16a34a" />
+                  <circle cx="30" cy="30" r="8" fill="#22c55e" />
+                  <rect x="20" y="14" width="8" height="20" fill="#0a0a0a" />
+                  <rect x="14" y="20" width="20" height="8" fill="#0a0a0a" />
+                  <circle cx="24" cy="24" r="4" fill="#22c55e" />
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="font-[family-name:var(--font-poppins)] font-bold text-lg text-white group-hover:text-amber-400 transition-colors">
+                <span className="font-[family-name:var(--font-poppins)] font-bold text-lg text-white group-hover:text-green-400 transition-colors">
                   CLOVERBELT
                 </span>
-                <span className="text-[10px] text-amber-500 tracking-[0.2em] uppercase">
-                  Construction
+                <span className="text-[10px] text-green-500 tracking-[0.2em] uppercase">
+                  Construction LLC
                 </span>
               </div>
             </Link>
@@ -66,7 +65,7 @@ const Footer = () => {
                 href="https://www.facebook.com/people/Cloverbelt-Construction/100063839118887/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-amber-600/30 text-white/60 hover:border-amber-500 hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center border border-green-600/30 text-white/60 hover:border-green-500 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -77,7 +76,7 @@ const Footer = () => {
                 href="https://x.com/cloverbeltconsn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-amber-600/30 text-white/60 hover:border-amber-500 hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center border border-green-600/30 text-white/60 hover:border-green-500 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300"
                 aria-label="X (Twitter)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -90,7 +89,7 @@ const Footer = () => {
           {/* Services Column */}
           <div>
             <h4 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-4 flex items-center gap-2">
-              <span className="w-8 h-[2px] bg-gradient-to-r from-amber-600 to-amber-500" />
+              <span className="w-8 h-[2px] bg-gradient-to-r from-green-600 to-green-500" />
               Services
             </h4>
             <ul className="space-y-2">
@@ -98,7 +97,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href="/services"
-                    className="text-white/60 text-sm hover:text-amber-400 transition-colors duration-300"
+                    className="text-white/60 text-sm hover:text-green-400 transition-colors duration-300"
                   >
                     {service}
                   </Link>
@@ -110,7 +109,7 @@ const Footer = () => {
           {/* Quick Links Column */}
           <div>
             <h4 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-4 flex items-center gap-2">
-              <span className="w-8 h-[2px] bg-gradient-to-r from-amber-600 to-amber-500" />
+              <span className="w-8 h-[2px] bg-gradient-to-r from-green-600 to-green-500" />
               Company
             </h4>
             <ul className="space-y-2">
@@ -118,7 +117,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-white/60 text-sm hover:text-amber-400 transition-colors duration-300"
+                    className="text-white/60 text-sm hover:text-green-400 transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -130,16 +129,16 @@ const Footer = () => {
           {/* Contact Column */}
           <div>
             <h4 className="font-[family-name:var(--font-poppins)] font-semibold text-white mb-4 flex items-center gap-2">
-              <span className="w-8 h-[2px] bg-gradient-to-r from-amber-600 to-amber-500" />
+              <span className="w-8 h-[2px] bg-gradient-to-r from-green-600 to-green-500" />
               Contact
             </h4>
             <ul className="space-y-4">
               <li>
                 <a
                   href="tel:+17152894098"
-                  className="flex items-center gap-3 text-white/60 text-sm hover:text-amber-400 transition-colors duration-300 group"
+                  className="flex items-center gap-3 text-white/60 text-sm hover:text-green-400 transition-colors duration-300 group"
                 >
-                  <span className="w-9 h-9 flex items-center justify-center border border-amber-600/30 group-hover:border-amber-500 group-hover:bg-amber-500/10 transition-all">
+                  <span className="w-9 h-9 flex items-center justify-center border border-green-600/30 group-hover:border-green-500 group-hover:bg-green-500/10 transition-all">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                     </svg>
@@ -152,9 +151,9 @@ const Footer = () => {
                   href="https://maps.google.com/?q=2515+250th+St+Cadott+WI+54727"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-white/60 text-sm hover:text-amber-400 transition-colors duration-300 group"
+                  className="flex items-start gap-3 text-white/60 text-sm hover:text-green-400 transition-colors duration-300 group"
                 >
-                  <span className="w-9 h-9 flex items-center justify-center border border-amber-600/30 group-hover:border-amber-500 group-hover:bg-amber-500/10 transition-all flex-shrink-0">
+                  <span className="w-9 h-9 flex items-center justify-center border border-green-600/30 group-hover:border-green-500 group-hover:bg-green-500/10 transition-all flex-shrink-0">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
@@ -168,7 +167,7 @@ const Footer = () => {
               </li>
               <li>
                 <div className="flex items-center gap-3 text-white/60 text-sm">
-                  <span className="w-9 h-9 flex items-center justify-center border border-amber-600/30 flex-shrink-0">
+                  <span className="w-9 h-9 flex items-center justify-center border border-green-600/30 flex-shrink-0">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -181,14 +180,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-amber-600/20">
+        <div className="pt-8 border-t border-green-600/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/40 text-sm">
               &copy; {currentYear} Cloverbelt Construction LLC. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <span className="text-white/40 text-xs uppercase tracking-wider">A+ BBB Rated</span>
-              <span className="text-amber-500">|</span>
+              <span className="text-green-500">|</span>
               <span className="text-white/40 text-xs uppercase tracking-wider">Licensed & Insured</span>
             </div>
           </div>
