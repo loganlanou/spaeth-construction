@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageHeader from '@/components/PageHeader';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Our Services | Cloverbelt Construction',
@@ -17,6 +18,7 @@ const services = [
     title: 'Commercial Construction',
     description: 'Full-scale commercial building projects including retail spaces, offices, and industrial facilities. Quality craftsmanship for businesses that demand excellence.',
     features: ['Office Buildings', 'Retail Spaces', 'Industrial Facilities', 'Renovations'],
+    image: '/images/construction-1.jpg',
   },
   {
     icon: (
@@ -27,6 +29,7 @@ const services = [
     title: 'Agricultural Buildings',
     description: 'Specialized agricultural construction including barns, storage facilities, and manure pits. Built to withstand Wisconsin\'s demanding conditions.',
     features: ['Barn Construction', 'Storage Buildings', 'Manure Pits', 'Equipment Sheds'],
+    image: '/images/construction-2.jpg',
   },
   {
     icon: (
@@ -37,6 +40,7 @@ const services = [
     title: 'Residential Construction',
     description: 'Custom home building and residential projects tailored to your vision. From foundations to finishing touches, we build homes that last.',
     features: ['Custom Homes', 'Garages', 'Additions', 'Remodeling'],
+    image: '/images/construction-3.jpg',
   },
   {
     icon: (
@@ -47,6 +51,7 @@ const services = [
     title: 'Concrete Work',
     description: 'Expert concrete services including decorative flatwork, stamped patios, driveways, and reinforced foundations. Precision pours every time.',
     features: ['Stamped Concrete', 'Decorative Flatwork', 'Driveways', 'Foundations'],
+    image: '/images/concrete.jpg',
   },
   {
     icon: (
@@ -57,6 +62,7 @@ const services = [
     title: 'Excavation & Land Clearing',
     description: 'Professional excavation and land preparation services. We prepare your site for construction with precision and efficiency.',
     features: ['Site Preparation', 'Land Clearing', 'Grading', 'Trenching'],
+    image: '/images/excavator.jpg',
   },
   {
     icon: (
@@ -67,52 +73,71 @@ const services = [
     title: 'Demolition Services',
     description: 'Safe and efficient demolition services for structures of all sizes. We handle removal and site cleanup professionally.',
     features: ['Building Demolition', 'Interior Gutting', 'Debris Removal', 'Site Cleanup'],
+    image: '/images/construction-1.jpg',
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <div className="bg-[#0a0a0a]">
+    <div className="bg-[#1a1714]">
       <PageHeader
         badge="Our Services"
         title="Comprehensive Construction"
         highlight="Solutions"
         description="From concept to completion, we deliver excellence across residential, commercial, and agricultural projects throughout Wisconsin."
+        backgroundImage="/images/construction-2.jpg"
       />
 
       {/* Services Grid */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 technical-grid opacity-30" />
+        <div className="absolute inset-0 warm-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group p-6 lg:p-8 card-architectural"
+                className="group relative overflow-hidden bg-[#222222] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-500"
               >
-                <div className="w-14 h-14 flex items-center justify-center border border-emerald-500/30 text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-white group-hover:border-emerald-500 transition-all duration-300">
-                  {service.icon}
+                {/* Background Image */}
+                <div className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1714] via-[#1a1714]/95 to-[#1a1714]/85" />
+
+                {/* Content */}
+                <div className="relative p-6 lg:p-8">
+                  <div className="w-14 h-14 flex items-center justify-center border border-amber-500/30 text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500 transition-all duration-300">
+                    {service.icon}
+                  </div>
+
+                  <h3 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-white/60 text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-2 text-sm">
+                        <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-white/50">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <h3 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
-                  {service.title}
-                </h3>
-
-                <p className="text-white/50 text-sm leading-relaxed mb-6">
-                  {service.description}
-                </p>
-
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                      <svg className="w-4 h-4 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-white/40">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </div>
             ))}
           </div>
@@ -120,22 +145,22 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 lg:py-24 bg-[#111111]">
-        <div className="absolute inset-0 blueprint-grid opacity-20" />
+      <section className="relative py-16 lg:py-24 bg-gradient-to-br from-amber-600 to-amber-700 overflow-hidden">
+        <div className="absolute inset-0 construction-stripes opacity-20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-3xl font-bold text-white mb-6">
+          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-4xl font-bold text-white mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
             Contact us today for a free consultation and estimate. We&apos;ll work with you to bring your vision to life.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-amber-700 font-bold hover:bg-amber-50 transition-colors shadow-xl"
           >
             Get a Free Quote
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

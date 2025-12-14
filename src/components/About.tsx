@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const About = () => {
   const values = [
     {
@@ -50,27 +52,29 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative py-24 lg:py-32 bg-white overflow-hidden"
+      className="relative py-24 lg:py-32 bg-[#1a1714] overflow-hidden"
     >
       {/* Background elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent"></div>
-      <div className="absolute -right-64 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-green-50 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute inset-0 warm-grid opacity-30" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div>
-            <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
-              About Us
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
+              <span className="text-amber-500 text-sm font-semibold uppercase tracking-wider">
+                About Us
+              </span>
+            </div>
+            <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Building Trust Since
-              <span className="block text-green-600">2001</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">2001</span>
             </h2>
-            <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
+            <p className="text-lg text-white/60 mb-6 leading-relaxed">
               Cloverbelt Construction LLC is a licensed, bonded, and insured construction company proudly serving Cadott, Wisconsin and the surrounding communities. Founded by Josh R. Spaeth, we&apos;ve built our reputation on quality craftsmanship, honest communication, and customer satisfaction.
             </p>
-            <p className="text-neutral-600 mb-8 leading-relaxed">
+            <p className="text-white/60 mb-8 leading-relaxed">
               From residential homes to commercial buildings and agricultural facilities, we bring the same dedication and expertise to every project. Our team specializes in concrete work, excavation, and full-scale construction services designed to meet the unique needs of Wisconsin property owners.
             </p>
 
@@ -79,14 +83,14 @@ const About = () => {
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-3 p-4 bg-neutral-50 rounded-xl hover:bg-green-50 transition-colors duration-300"
+                  className="flex items-start gap-3 p-4 bg-[#222222] border border-amber-600/10 hover:border-amber-500/30 transition-colors duration-300"
                 >
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 flex-shrink-0">
+                  <div className="w-10 h-10 flex items-center justify-center border border-amber-500/30 text-amber-400 flex-shrink-0">
                     {value.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-neutral-900 mb-1">{value.title}</h4>
-                    <p className="text-sm text-neutral-500">{value.description}</p>
+                    <h4 className="font-semibold text-white mb-1">{value.title}</h4>
+                    <p className="text-sm text-white/50">{value.description}</p>
                   </div>
                 </div>
               ))}
@@ -96,11 +100,21 @@ const About = () => {
           {/* Right content - Timeline */}
           <div>
             <div className="relative">
-              {/* Decorative background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl transform rotate-1"></div>
-              <div className="relative bg-gradient-to-br from-neutral-900 to-green-950 rounded-3xl p-8 lg:p-10">
+              {/* Image */}
+              <div className="relative aspect-[4/3] overflow-hidden mb-8">
+                <Image
+                  src="/images/construction-2.jpg"
+                  alt="Cloverbelt Construction team"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/30 to-transparent" />
+              </div>
+
+              {/* Timeline Card */}
+              <div className="bg-[#222222] border border-amber-600/20 p-8">
                 <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <span className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
+                  <span className="w-10 h-10 bg-amber-500 flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -113,27 +127,27 @@ const About = () => {
                     <div key={index} className="flex gap-4 group">
                       {/* Year bubble */}
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center group-hover:bg-green-500 group-hover:border-green-500 transition-all duration-300">
-                          <span className="text-sm font-bold text-green-400 group-hover:text-white transition-colors duration-300">
+                        <div className="w-16 h-16 bg-amber-500/10 border border-amber-500/30 flex items-center justify-center group-hover:bg-amber-500 group-hover:border-amber-500 transition-all duration-300">
+                          <span className="text-sm font-bold text-amber-400 group-hover:text-white transition-colors duration-300">
                             {milestone.year}
                           </span>
                         </div>
                       </div>
                       {/* Content */}
                       <div className="flex-1 pt-1">
-                        <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-green-300 transition-colors duration-300">
+                        <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-amber-400 transition-colors duration-300">
                           {milestone.event}
                         </h4>
-                        <p className="text-neutral-400 text-sm">{milestone.description}</p>
+                        <p className="text-white/50 text-sm">{milestone.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
                 {/* BBB Badge */}
-                <div className="mt-8 pt-8 border-t border-white/10">
+                <div className="mt-8 pt-8 border-t border-amber-600/20">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center">
+                    <div className="w-14 h-14 bg-white flex items-center justify-center">
                       <span className="text-2xl font-black text-blue-800">BBB</span>
                     </div>
                     <div>
@@ -141,13 +155,13 @@ const About = () => {
                         <span className="text-white font-semibold">A+ Rated</span>
                         <div className="flex gap-0.5">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <svg key={i} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}
                         </div>
                       </div>
-                      <p className="text-neutral-400 text-sm">Better Business Bureau</p>
+                      <p className="text-white/50 text-sm">Better Business Bureau</p>
                     </div>
                   </div>
                 </div>

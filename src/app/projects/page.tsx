@@ -81,17 +81,18 @@ export default function ProjectsPage() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <div className="bg-[#0a0a0a]">
+    <div className="bg-[#1a1714]">
       <PageHeader
         badge="Our Portfolio"
         title="Featured"
         highlight="Projects"
         description="A showcase of our craftsmanship across residential, commercial, and agricultural construction."
+        backgroundImage="/images/construction-3.jpg"
       />
 
       {/* Projects Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 technical-grid opacity-30" />
+        <div className="absolute inset-0 warm-grid opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Filter */}
@@ -102,8 +103,8 @@ export default function ProjectsPage() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                   activeCategory === category
-                    ? 'bg-emerald-500 text-white'
-                    : 'bg-transparent text-white/50 border border-white/10 hover:border-emerald-500/50 hover:text-white'
+                    ? 'bg-gradient-to-r from-amber-600 to-amber-500 text-white shadow-lg shadow-amber-600/30'
+                    : 'bg-white/5 text-white/60 border border-amber-600/20 hover:border-amber-500/50 hover:text-white'
                 }`}
               >
                 {category}
@@ -116,7 +117,7 @@ export default function ProjectsPage() {
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className="group card-architectural overflow-hidden"
+                className="group relative overflow-hidden bg-[#222222] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-500"
               >
                 {/* Project Image */}
                 <div className="relative h-48 lg:h-56 overflow-hidden">
@@ -124,13 +125,13 @@ export default function ProjectsPage() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1714] via-[#1a1714]/40 to-transparent" />
 
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-emerald-500 text-white text-xs font-semibold uppercase tracking-wider">
+                    <span className="px-3 py-1 bg-amber-500/90 text-white text-xs font-semibold uppercase tracking-wider">
                       {project.category}
                     </span>
                   </div>
@@ -138,10 +139,10 @@ export default function ProjectsPage() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="font-[family-name:var(--font-poppins)] text-lg font-semibold text-white mb-2 group-hover:text-emerald-400 transition-colors duration-300">
+                  <h3 className="font-[family-name:var(--font-poppins)] text-lg font-semibold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-white/50 text-sm mb-4 leading-relaxed">
+                  <p className="text-white/60 text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -150,13 +151,16 @@ export default function ProjectsPage() {
                     {project.stats.map((stat, statIndex) => (
                       <span
                         key={statIndex}
-                        className="px-2.5 py-1 bg-white/5 text-white/40 text-xs border border-white/5"
+                        className="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs border border-amber-500/20"
                       >
                         {stat}
                       </span>
                     ))}
                   </div>
                 </div>
+
+                {/* Hover line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </div>
             ))}
           </div>
@@ -164,22 +168,22 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 lg:py-24 bg-[#111111]">
-        <div className="absolute inset-0 blueprint-grid opacity-20" />
+      <section className="relative py-16 lg:py-24 bg-gradient-to-br from-amber-600 to-amber-700 overflow-hidden">
+        <div className="absolute inset-0 construction-stripes opacity-20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-3xl font-bold text-white mb-6">
+          <h2 className="font-[family-name:var(--font-poppins)] text-2xl lg:text-4xl font-bold text-white mb-6">
             Want to See Your Project Featured Here?
           </h2>
-          <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
             Contact us today to discuss your construction needs and get a free estimate.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-amber-700 font-bold hover:bg-amber-50 transition-colors shadow-xl"
           >
             Start Your Project
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

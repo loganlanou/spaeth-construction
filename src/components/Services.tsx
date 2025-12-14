@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const services = [
   {
     icon: (
@@ -10,6 +12,7 @@ const services = [
     title: 'Commercial Construction',
     description: 'Full-scale commercial building projects including retail spaces, offices, and industrial facilities. Quality craftsmanship for businesses that demand excellence.',
     features: ['Office Buildings', 'Retail Spaces', 'Industrial Facilities', 'Renovations'],
+    image: '/images/construction-1.jpg',
   },
   {
     icon: (
@@ -20,6 +23,7 @@ const services = [
     title: 'Agricultural Buildings',
     description: 'Specialized agricultural construction including barns, storage facilities, and manure pits. Built to withstand Wisconsin\'s demanding conditions.',
     features: ['Barn Construction', 'Storage Buildings', 'Manure Pits', 'Equipment Sheds'],
+    image: '/images/construction-2.jpg',
   },
   {
     icon: (
@@ -30,6 +34,7 @@ const services = [
     title: 'Residential Construction',
     description: 'Custom home building and residential projects tailored to your vision. From foundations to finishing touches, we build homes that last.',
     features: ['Custom Homes', 'Garages', 'Additions', 'Remodeling'],
+    image: '/images/construction-3.jpg',
   },
   {
     icon: (
@@ -40,6 +45,7 @@ const services = [
     title: 'Concrete Work',
     description: 'Expert concrete services including decorative flatwork, stamped patios, driveways, and reinforced foundations. Precision pours every time.',
     features: ['Stamped Concrete', 'Decorative Flatwork', 'Driveways', 'Foundations'],
+    image: '/images/concrete.jpg',
   },
   {
     icon: (
@@ -50,6 +56,7 @@ const services = [
     title: 'Excavation & Land Clearing',
     description: 'Professional excavation and land preparation services. We prepare your site for construction with precision and efficiency.',
     features: ['Site Preparation', 'Land Clearing', 'Grading', 'Trenching'],
+    image: '/images/excavator.jpg',
   },
   {
     icon: (
@@ -60,6 +67,7 @@ const services = [
     title: 'Demolition Services',
     description: 'Safe and efficient demolition services for structures of all sizes. We handle removal and site cleanup professionally.',
     features: ['Building Demolition', 'Interior Gutting', 'Debris Removal', 'Site Cleanup'],
+    image: '/images/construction-1.jpg',
   },
 ];
 
@@ -67,62 +75,78 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative py-24 lg:py-32 bg-neutral-50 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-[#1a1714] overflow-hidden"
     >
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green-50/50 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-100/50 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+      {/* Background */}
+      <div className="absolute inset-0 warm-grid opacity-40" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
-            Our Services
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-12 h-[3px] bg-gradient-to-r from-amber-600 to-amber-500" />
+            <span className="text-amber-500 text-sm font-semibold uppercase tracking-wider">
+              Our Services
+            </span>
+            <div className="w-12 h-[3px] bg-gradient-to-l from-amber-600 to-amber-500" />
+          </div>
+          <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Comprehensive Construction
-            <br />
-            <span className="text-green-600">Solutions</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">Solutions</span>
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
             From concept to completion, we deliver excellence across residential, commercial, and agricultural projects throughout Wisconsin.
           </p>
         </div>
 
         {/* Services grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg shadow-neutral-200/50 hover:shadow-xl hover:shadow-green-100/50 transition-all duration-500 hover:-translate-y-2"
+              className="group relative overflow-hidden bg-[#222222] border border-amber-600/10 hover:border-amber-500/40 transition-all duration-500"
             >
-              {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-green-500 group-hover:to-green-600 group-hover:text-white transition-all duration-300">
-                {service.icon}
+              {/* Background Image */}
+              <div className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1714] via-[#1a1714]/95 to-[#1a1714]/85" />
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-green-700 transition-colors duration-300">
-                {service.title}
-              </h3>
-              <p className="text-neutral-600 mb-6 leading-relaxed">
-                {service.description}
-              </p>
+              <div className="relative p-8">
+                {/* Icon */}
+                <div className="w-16 h-16 flex items-center justify-center border border-amber-500/30 text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500 transition-all duration-300">
+                  {service.icon}
+                </div>
 
-              {/* Features */}
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-2 text-sm text-neutral-500">
-                    <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+                {/* Title & Description */}
+                <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-white/60 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
 
-              {/* Hover accent line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-green-600 rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                {/* Features */}
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-2 text-sm text-white/50">
+                      <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </div>
           ))}
         </div>
@@ -130,8 +154,8 @@ const Services = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-neutral-900 text-white font-semibold rounded-xl hover:bg-neutral-800 transform hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-neutral-900/20"
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-amber-500 text-white font-semibold hover:from-amber-500 hover:to-amber-400 transition-all duration-300 shadow-lg shadow-amber-600/20"
           >
             Discuss Your Project
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
